@@ -1,0 +1,7 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+#不追踪 苹果电脑工程就不追踪 用cmakelist 生成 苹果系统通过
+Mac/*
+Win/*
+其他/*

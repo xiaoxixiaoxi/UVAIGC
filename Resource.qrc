@@ -1,0 +1,46 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>Resource/image/winOCRUI/arrow.backward.to.line.svg</file>
+        <file>Resource/image/winOCRUI/arrow.right.to.line.svg</file>
+        <file>Resource/image/winOCRUI/backward.svg</file>
+        <file>Resource/image/winOCRUI/doc.viewfinder.fill.svg</file>
+        <file>Resource/image/winOCRUI/folder.badge.plus.svg</file>
+        <file>Resource/image/winOCRUI/folder.svg</file>
+        <file>Resource/image/winOCRUI/forward.svg</file>
+        <file>Resource/image/winOCRUI/link.svg</file>
+        <file>Resource/image/winOCRUI/pause.fill.svg</file>
+        <file>Resource/image/winOCRUI/play.svg</file>
+        <file>Resource/image/winOCRUI/plus.circle.svg</file>
+        <file>Resource/image/winOCRUI/slider.vertical.3.svg</file>
+        <file>Resource/image/winOCRUI/square.and.arrow.down.svg</file>
+        <file>Resource/image/winOCRUI/text.viewfinder.svg</file>
+        <file>Resource/image/winOCRUI/trash.svg</file>
+        <file>Resource/image/winOCRUI/tray.and.arrow.down.svg</file>
+        <file>Resource/image/winOCRUI/tray.and.arrow.up.svg</file>
+        <file>Resource/image/winOCRUI/pause.svg</file>
+        <file>Resource/image/winOCRUI/arrowshape.turn.up.left.fill.svg</file>
+        <file>Resource/image/winOCRUI/questionmark.circle.svg</file>
+        <file>Resource/image/winOCRUI/ExportSRT.svg</file>
+        <file>Resource/image/winOCRUI/ExportTXT.svg</file>
+        <file>Resource/image/winOCRUI/Export.svg</file>
+    </qresource>
+    <qresource prefix="/new/1_1image">
+        <file>Resource/image/winOCRUI/1.1/arrow.down.circle.fill.svg</file>
+        <file>Resource/image/winOCRUI/1.1/arrow.down.circle.svg</file>
+        <file>Resource/image/winOCRUI/1.1/arrow.triangle.2.circlepath.svg</file>
+        <file>Resource/image/winOCRUI/1.1/icloud.and.arrow.down.fill.svg</file>
+        <file>Resource/image/winOCRUI/1.1/icloud.slash.svg</file>
+        <file>Resource/image/winOCRUI/1.1/music.note.tv.fill.svg</file>
+        <file>Resource/image/winOCRUI/1.1/photo.fill.svg</file>
+        <file>Resource/image/winOCRUI/1.1/waveform.svg</file>
+        <file>Resource/image/UVAIGC/person.crop.circle.fill.svg</file>
+        <file>Resource/image/UVAIGC/house.svg</file>
+        <file>Resource/image/UVAIGC/gearshape.svg</file>
+        <file>Resource/image/bj.png</file>
+        <file>Resource/image/App Store-512@2x.png</file>
+    </qresource>
+    <qresource prefix="/i18n">
+        <file>translations/UVAIGC_es_US.qm</file>
+        <file>translations/UVAIGC_zh_CN.qm</file>
+    </qresource>
+</RCC>
