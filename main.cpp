@@ -13,7 +13,7 @@
 #include "user/UserModule/UserModule.hpp"
 #include "user/UserMainWindow.h"
 #include <QMenuBar>
-//添加一个注释纯纯粹粹
+//添加一个注释纯纯粹粹 win修改
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
