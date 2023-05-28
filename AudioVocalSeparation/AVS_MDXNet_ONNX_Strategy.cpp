@@ -7,7 +7,9 @@
 
 #include "AVS_MDXNet_ONNX_Strategy.hpp"
 #include "AudioFile.h"
-
+//#include  <QSysInfo>
+//判断平台用的
+#include <QObject>
 
 
 AVS_MDXNet_ONNX_Strategy::AVS_MDXNet_ONNX_Strategy(AVS_LoaderFile* m_fileLoader)
@@ -62,9 +64,18 @@ bool AVS_MDXNet_ONNX_Strategy::loadOxxnModel(Ort::Session*& session,std::string 
     
     
     try {
+//        平台判断
+#ifdef Q_OS_WIN
+         session = new Ort::Session(env, weightFile_w.c_str(), Ort::SessionOptions{ nullptr });
+#endif
+
+#ifdef Q_OS_MAC
+          session = new Ort::Session(env,weightFile.c_str(), Ort::SessionOptions{ nullptr });
+#endif
+
         
         //加载ONNX模型
-        session = new Ort::Session(env, weightFile_w.c_str(), Ort::SessionOptions{ nullptr });
+
 //        getInPutGetShape(session);
 
      } catch (const Ort::Exception& exception) {
@@ -128,7 +139,18 @@ bool AVS_MDXNet_ONNX_Strategy::verifyModel(std::string modelPath){
     std::wstring weightFile_w(modelPath.begin(), modelPath.end());
 
     //加载ONNX模型
-    Ort::Session  test_session_Instrumental(test_env, weightFile_w.c_str(), Ort::SessionOptions{ nullptr });
+
+
+//        平台判断
+#ifdef Q_OS_WIN
+      Ort::Session  test_session_Instrumental(test_env, weightFile_w.c_str(), Ort::SessionOptions{ nullptr });
+#endif
+
+#ifdef Q_OS_MAC
+      Ort::Session  test_session_Instrumental(test_env, modelPath.c_str(), Ort::SessionOptions{ nullptr });
+#endif
+
+
     return true;
     
 }

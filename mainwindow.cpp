@@ -160,7 +160,7 @@ MainWindow::MainWindow(QWidget *parent)
     }else {
         //浅色
          qDebug()<<"浅色";
-        ui->label_4->setStyleSheet("{background-image: url(:/new/1_1image/Resource/image/bj.png); background-repeat: no-repeat; background-position: center;border-radius: 10px;box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);letter-spacing: 5px;}");
+        ui->label_4->setStyleSheet("#label_4 {background-image: url(:/new/1_1image/Resource/image/bj.png); background-repeat: no-repeat; background-position: center;border-radius: 10px;box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);letter-spacing: 5px;}");
     }
 
 

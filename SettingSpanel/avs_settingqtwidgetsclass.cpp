@@ -442,7 +442,16 @@ void AVS_SettingQtWidgetsClass::verifyModel(){
 
              std::wstring weightFile_w(i.toStdString().begin(), i.toStdString().end());
             //加载ONNX模型
+
+
+//        平台判断
+#ifdef Q_OS_WIN
             Ort::Session  test_session_Instrumental(test_env,weightFile_w.c_str(), Ort::SessionOptions{ nullptr });
+#endif
+
+#ifdef Q_OS_MAC
+           Ort::Session  test_session_Instrumental(test_env,i.toStdString().c_str(), Ort::SessionOptions{ nullptr });
+#endif
             
             ok_path += i+"\n";
  
