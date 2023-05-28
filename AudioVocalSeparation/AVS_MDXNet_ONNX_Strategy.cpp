@@ -57,13 +57,14 @@ bool AVS_MDXNet_ONNX_Strategy::loadOxxnModel(Ort::Session*& session,std::string 
     //std::string weightFile = "/Users/linximing/Desktop/models/MDX_Net_Models/UVR-MDX-NET-Inst_HQ_1.onnx";
     std::string weightFile = modelPath;
     
-    
+
+    std::wstring weightFile_w(weightFile.begin(), weightFile.end());
     
     
     try {
         
         //加载ONNX模型
-        session = new Ort::Session(env, weightFile.c_str(), Ort::SessionOptions{ nullptr });
+        session = new Ort::Session(env, weightFile_w.c_str(), Ort::SessionOptions{ nullptr });
 //        getInPutGetShape(session);
 
      } catch (const Ort::Exception& exception) {
@@ -123,8 +124,11 @@ bool AVS_MDXNet_ONNX_Strategy::isLoadModel(AVS_MDXNet_Models_Type type){
 bool AVS_MDXNet_ONNX_Strategy::verifyModel(std::string modelPath){
       
     Ort::Env test_env;
+
+    std::wstring weightFile_w(modelPath.begin(), modelPath.end());
+
     //加载ONNX模型
-    Ort::Session  test_session_Instrumental(test_env, modelPath.c_str(), Ort::SessionOptions{ nullptr });
+    Ort::Session  test_session_Instrumental(test_env, weightFile_w.c_str(), Ort::SessionOptions{ nullptr });
     return true;
     
 }

@@ -144,21 +144,27 @@ AVS_SettingQtWidgetsClass::AVS_SettingQtWidgetsClass(QWidget *parent) :
     
     
     QStringList default_OutType_list = settings.value(KEY_AVS_OutType_list).toStringList();
-    ui->Instrumental_checkBox->setChecked(false);
-    ui->Vocals_checkBox->setChecked(false);
-    for (QString i : default_OutType_list ) {
-        
-        if (i=="Instrumental"){
-            ui->Instrumental_checkBox->setChecked(true);
+    if(default_OutType_list.isEmpty() ){
+
+    }else {
+        ui->Instrumental_checkBox->setChecked(false);
+        ui->Vocals_checkBox->setChecked(false);
+        for (QString i : default_OutType_list ) {
+
+            if (i=="Instrumental"){
+                ui->Instrumental_checkBox->setChecked(true);
+            }
+            if (i=="Vocals"){
+                ui->Vocals_checkBox->setChecked(true);
+            }
+
+
         }
-        if (i=="Vocals"){
-            ui->Vocals_checkBox->setChecked(true);
-        }
-        
-       
+
+
+
     }
-    
-    
+
     //绑定默认选择输出类型
     connect(ui->Vocals_checkBox, &QPushButton::clicked, this, &AVS_SettingQtWidgetsClass::set_default_Models_Type_list);
     connect(ui->Instrumental_checkBox, &QPushButton::clicked, this, &AVS_SettingQtWidgetsClass::set_default_Models_Type_list);
@@ -433,8 +439,10 @@ void AVS_SettingQtWidgetsClass::verifyModel(){
         
         try {
             Ort::Env test_env;
+
+             std::wstring weightFile_w(i.toStdString().begin(), i.toStdString().end());
             //加载ONNX模型
-            Ort::Session  test_session_Instrumental(test_env,i.toStdString().c_str(), Ort::SessionOptions{ nullptr });
+            Ort::Session  test_session_Instrumental(test_env,weightFile_w.c_str(), Ort::SessionOptions{ nullptr });
             
             ok_path += i+"\n";
  

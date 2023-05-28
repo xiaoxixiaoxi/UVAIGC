@@ -30,7 +30,7 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
       <property name="spacing">
-       <number>-1</number>
+       <number>6</number>
       </property>
       <property name="leftMargin">
        <number>12</number>
@@ -51,7 +51,7 @@
         </property>
         <property name="font">
          <font>
-          <pointsize>13</pointsize>
+          <pointsize>10</pointsize>
          </font>
         </property>
         <property name="text">
@@ -66,7 +66,7 @@
        <widget class="QToolButton" name="avs_toolButton">
         <property name="font">
          <font>
-          <pointsize>13</pointsize>
+          <pointsize>10</pointsize>
          </font>
         </property>
         <property name="text">
@@ -91,7 +91,7 @@
        <widget class="QToolButton" name="toMoreTool_toolButton">
         <property name="font">
          <font>
-          <pointsize>13</pointsize>
+          <pointsize>10</pointsize>
          </font>
         </property>
         <property name="text">
@@ -103,7 +103,7 @@
        <widget class="QToolButton" name="setting_toolButton">
         <property name="font">
          <font>
-          <pointsize>13</pointsize>
+          <pointsize>10</pointsize>
          </font>
         </property>
         <property name="text">
@@ -115,7 +115,7 @@
        <widget class="QToolButton" name="user_toolButton">
         <property name="font">
          <font>
-          <pointsize>13</pointsize>
+          <pointsize>10</pointsize>
          </font>
         </property>
         <property name="text">
@@ -195,7 +195,7 @@
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <property name="spacing">
-           <number>-1</number>
+           <number>6</number>
           </property>
           <item>
            <widget class="QLabel" name="label">
@@ -377,7 +377,7 @@
      <x>0</x>
      <y>0</y>
      <width>746</width>
-     <height>24</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

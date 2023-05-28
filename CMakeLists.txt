@@ -43,9 +43,13 @@ set(DSF_Lib_DIR "${PROJECT_SOURCE_DIR}/Lib")
 IF (WIN32)
           MESSAGE("是win系统")
         set(DSF_Lib_DIR "${PROJECT_SOURCE_DIR}/Lib/WINLib")
+        set(ONNX_Lib_DIR "${DSF_Lib_DIR}/onnxruntime-win-x64-1.14.1")
+
 ELSEIF (APPLE)
         MESSAGE("是苹果系统")
         set(DSF_Lib_DIR "${PROJECT_SOURCE_DIR}/Lib/MACLib")
+        set(ONNX_Lib_DIR "${DSF_Lib_DIR}/onnxruntime-osx-universal2-1.14.1")
+
 
 ELSEIF (UNIX)
     MESSAGE("是lin系统")
@@ -56,7 +60,7 @@ ENDIF ()
 #第三方 头文件
 # ONNXRUNTIME
  # 绝对路径引入 头文件
- include_directories("${DSF_Lib_DIR}/onnxruntime-osx-universal2-1.14.1/include")
+ include_directories("${ONNX_Lib_DIR}/include")
  include_directories("${DSF_Lib_DIR}/fftw3/include")
 
  include_directories("${PROJECT_SOURCE_DIR}/Basis")
@@ -192,6 +196,8 @@ set(PROJECT_SOURCES
       user/usermemberwindow.ui
       user/UserDeviceCustomDialog.cpp
       user/UserDeviceCustomDialog.hpp
+
+      UVAIGC.rc
          
          
         ${TS_FILES}
@@ -231,8 +237,21 @@ target_link_libraries(UVAIGC PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(UVAIGC PRIVATE Qt6::Network Qt6::Multimedia Qt6::MultimediaWidgets Qt6::Svg)
 
 #添加第三方库
-target_link_libraries(UVAIGC PRIVATE "${DSF_Lib_DIR}/onnxruntime-osx-universal2-1.14.1/lib/libonnxruntime.dylib")
-target_link_libraries(UVAIGC PRIVATE "${DSF_Lib_DIR}/fftw3/lib/libfftw3.a")
+IF (WIN32)
+     MESSAGE("是win系统")
+     target_link_libraries(UVAIGC PRIVATE "${ONNX_Lib_DIR}/lib/onnxruntime.lib")
+     target_link_libraries(UVAIGC PRIVATE "${DSF_Lib_DIR}/fftw3/lib/libfftw3-3.lib")
+
+
+ELSEIF (APPLE)
+        MESSAGE("是苹果系统")
+        target_link_libraries(UVAIGC PRIVATE "${ONNX_Lib_DIR}/lib/libonnxruntime.dylib")
+        target_link_libraries(UVAIGC PRIVATE "${DSF_Lib_DIR}/fftw3/lib/libfftw3.a")
+
+ELSEIF (UNIX)
+    MESSAGE("是lin系统")
+ENDIF ()
+
 
 #翻译
 add_custom_target(translations_target DEPENDS ${QM_FILES})

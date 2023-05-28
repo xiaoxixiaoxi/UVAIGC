@@ -414,6 +414,7 @@ bool VideoQtWidgets::myInIt(AVS_Task* mytask) {
 
 bool VideoQtWidgets::set_mytask(AVS_Task* mytask){
     myInIt(mytask);
+    return true;
 }
 
 

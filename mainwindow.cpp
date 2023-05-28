@@ -42,10 +42,10 @@ QString styleSheet02 = "QToolButton {"
 
 void setSvgIcon(QToolButton* button, const QString& filePath, const QColor& color, const QSize& size)
 {
-    
-    button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    button->setToolTip(button->text());
+//    button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     button->setIconSize(size);
-    button->setFixedSize(90, 30);
+    button->setFixedSize(45, 30);
     button->setStyleSheet(styleSheet01);
     
     QSvgRenderer renderer(filePath);
@@ -127,6 +127,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(&avs_Wnd,&TaskListWidgetsClass::toProwin_Sig,this,[=](){
         toUserWnd();
     });
+
+
     
     
     
@@ -134,6 +136,7 @@ MainWindow::MainWindow(QWidget *parent)
     
     // 获取软件版本号
     QString version = QCoreApplication::applicationVersion();
+//    qDebug() << "version :" << version ;
     ui->version_label->setText(version);
     
 //    QMenuBar* menuBar = new QMenuBar(this);
@@ -143,6 +146,25 @@ MainWindow::MainWindow(QWidget *parent)
 //    appMenu->addAction(tr("QuitAA"), this, &MainWindow::close);
 //不能删除
     QMenuBar *menuBar = new QMenuBar(0);
+
+
+    //广告语样式调整
+    QPalette palette =   qApp->palette();
+
+    if(palette.color(QPalette::Text).lightnessF()<0.5){
+        //深色
+        qDebug()<<"深色";
+
+         ui->label_4->setStyleSheet("#label_4 {background-image: url(:/new/1_1image/Resource/image/bj.png); background-repeat: no-repeat; background-position: center;border-radius: 10px;box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);letter-spacing: 5px;color:#ffffff;}");
+
+    }else {
+        //浅色
+         qDebug()<<"浅色";
+        ui->label_4->setStyleSheet("{background-image: url(:/new/1_1image/Resource/image/bj.png); background-repeat: no-repeat; background-position: center;border-radius: 10px;box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);letter-spacing: 5px;}");
+    }
+
+
+
     
     
     

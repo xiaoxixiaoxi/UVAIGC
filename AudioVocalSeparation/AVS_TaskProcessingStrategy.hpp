@@ -25,6 +25,7 @@
 
 #include "SaveFile/AVS_SaveFileModule.hpp"
 
+#define M_PI 3.14159265358979323846
 //定义一个取消引起的异常
 class OperationCanceledException : public std::runtime_error {
 public:

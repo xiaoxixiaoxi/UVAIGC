@@ -9,6 +9,7 @@
 #define AVS_LoaderFile_hpp
 
 #include <stdio.h>
+#include <string>
 #include <vector>
 class AVS_LoaderFile {
 public:

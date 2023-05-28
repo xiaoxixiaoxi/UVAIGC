@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     
+    QCoreApplication::setApplicationVersion("1.0");
     
     //检查更新
     QTimer::singleShot(2000, &a, [=]() {

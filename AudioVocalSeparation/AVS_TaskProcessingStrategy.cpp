@@ -10,7 +10,6 @@
 
 
 
-
 // 音频STFT变换函数
 std::vector<std::vector<std::complex<double>>> AVS_TaskProcessingStrategy::stft_v2(const std::vector<double>& audio, const int fft_size, const int hop_size)
 {

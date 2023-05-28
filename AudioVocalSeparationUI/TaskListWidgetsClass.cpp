@@ -533,18 +533,31 @@ void TaskListWidgetsClass::init_avsTask_obj(AVS_Task& obj){
     //配置默认输出类型
     QStringList default_OutType_list = settings.value(QSettings_KEY_AVS_OutType_list).toStringList();
     obj.m_mdxnet_type_list.clear();
-    
-    for (QString i : default_OutType_list ) {
-        
-        if (i=="Instrumental"){
-            obj.m_mdxnet_type_list.push_back(AVS_MDXNet_Models_Type::MMType_Instrumental);
+
+    if(default_OutType_list.isEmpty()){
+        //没有存储值 默认给选项
+        obj.m_mdxnet_type_list.push_back(AVS_MDXNet_Models_Type::MMType_Instrumental);
+        obj.m_mdxnet_type_list.push_back(AVS_MDXNet_Models_Type::MMType_Vocals);
+
+    }else {
+
+        for (QString i : default_OutType_list ) {
+
+            if (i=="Instrumental"){
+                obj.m_mdxnet_type_list.push_back(AVS_MDXNet_Models_Type::MMType_Instrumental);
+            }
+            if (i=="Vocals"){
+                obj.m_mdxnet_type_list.push_back(AVS_MDXNet_Models_Type::MMType_Vocals);
+            }
+
+
         }
-        if (i=="Vocals"){
-            obj.m_mdxnet_type_list.push_back(AVS_MDXNet_Models_Type::MMType_Vocals);
-        }
-        
-       
+
     }
+
+
+    
+
     
     
     

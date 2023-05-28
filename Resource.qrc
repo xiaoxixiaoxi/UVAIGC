@@ -38,6 +38,7 @@
         <file>Resource/image/UVAIGC/gearshape.svg</file>
         <file>Resource/image/bj.png</file>
         <file>Resource/image/App Store-512@2x.png</file>
+        <file>Resource/image/App-Store-512_2x.ico</file>
     </qresource>
     <qresource prefix="/i18n">
         <file>translations/UVAIGC_es_US.qm</file>

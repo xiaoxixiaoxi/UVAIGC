@@ -188,6 +188,7 @@ void TaskQListWidget::showRawPath(int type)
         else if (type == 0)
         {
             pathIn_list << QString::fromStdString(obj.getUrl());
+//            qDebug() << QString::fromStdString(obj.getUrl());
 
         }
         AVS_Task_QTtool::showFileFromFinder(pathIn_list);

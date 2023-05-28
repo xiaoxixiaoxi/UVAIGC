@@ -13,6 +13,8 @@
 #include "../Basis/SRTQTime.h"
 
 #include <QProcess>
+#include <QDesktopServices>
+#include <QDir>
 
 
 // 判断是否可以导入
@@ -58,6 +60,7 @@ bool AVS_Task_QTtool::if_hasVideo(AVS_Task& obj ,QUrl url)
         //不要名称
         
         obj.setUrl(url.path().toStdString());
+//        qDebug() << "8888" << url;
         //设置状态
         obj.set_stateWaiting();
     
@@ -137,15 +140,25 @@ QString AVS_Task_QTtool::getShowInfo(AVS_Task* obj){
 
 
 void AVS_Task_QTtool::showFileFromFinder(QStringList& pathList){
+
+//    for (const QString& filePath : pathList) {
+//        QUrl fileUrl = QUrl::fromLocalFile(filePath);
+//        QDesktopServices::openUrl(fileUrl.adjusted(QUrl::RemoveFilename));
+
+//    }
     
     //win
 #ifdef Q_OS_WIN
+    //TODO: 用qt接口
     const QString explorer = "explorer";
     QStringList param;
-    for(QString pathIn : pathList){
-        if (!QFileInfo(pathIn).isDir())
+    for(QString& pathIn : pathList){
+
+        QUrl fileUrl = QUrl::fromLocalFile(pathIn);
+         qDebug() << pathIn << fileUrl << fileUrl.toLocalFile();
+        if (!QFileInfo(fileUrl.toLocalFile()).isDir())
             param << QLatin1String("/select,");
-        param << QDir::toNativeSeparators(pathIn);
+        param << QDir::toNativeSeparators(fileUrl.toLocalFile());
         
     }
     QProcess::startDetached(explorer, param);
