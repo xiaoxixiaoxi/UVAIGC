@@ -37,6 +37,8 @@ AVS_SettingQtWidgetsClass::AVS_SettingQtWidgetsClass(QWidget *parent) :
 
         }
         this->model_save_path = movies_path;
+        //保存一下默认目录
+        set_model_save_path();
     }
     ui->model_save_path_label->setText(this->model_save_path);
     
@@ -179,6 +181,8 @@ AVS_SettingQtWidgetsClass::AVS_SettingQtWidgetsClass(QWidget *parent) :
         });
     
     
+    init_OutType_suffix();
+    
     
     
     
@@ -267,6 +271,11 @@ void AVS_SettingQtWidgetsClass::set_model_selection_comboBox() {
 
     
     ui->model_Instrumental_selection_comboBox->setCurrentIndex(currentIndex);
+    
+    this->model_Instrumental_selection_name =  ui->model_Instrumental_selection_comboBox->currentData().toString();
+    settings.setValue(KEY_Instrumental_selection_name, model_Instrumental_selection_name);
+    
+    
 
 
 
@@ -300,6 +309,9 @@ void AVS_SettingQtWidgetsClass::set_model_Vocals_selection_comboBox() {
 
     
     ui->model_Vocals_selection_comboBox->setCurrentIndex(currentIndex);
+    
+    this->model_Vocals_selection_name =  ui->model_Vocals_selection_comboBox->currentData().toString();
+    settings.setValue(KEY_Vocals_selection_name, model_Vocals_selection_name);
 
 
 
@@ -435,17 +447,18 @@ void AVS_SettingQtWidgetsClass::verifyModel(){
     
     QString ok_path = "";
     
-    for(QString& i : all_path){
+    for(QString i : all_path){
         
         try {
             Ort::Env test_env;
 
-             std::wstring weightFile_w(i.toStdString().begin(), i.toStdString().end());
-            //加载ONNX模型
+           
 
 
 //        平台判断
 #ifdef Q_OS_WIN
+            std::wstring weightFile_w(i.toStdString().begin(), i.toStdString().end());
+           //加载ONNX模型
             Ort::Session  test_session_Instrumental(test_env,weightFile_w.c_str(), Ort::SessionOptions{ nullptr });
 #endif
 
@@ -499,3 +512,49 @@ void AVS_SettingQtWidgetsClass::verifyModel(){
 
 
 //验证模型
+
+
+
+void AVS_SettingQtWidgetsClass::init_OutType_suffix(){
+    
+    //恢复
+    default_out_suffix = settings.value(QSettings_KEY_AVS_OutType_suffix).toString();
+    if (default_out_suffix == "mp3") {
+        ui->mp3_radioButton->setChecked(true);
+    }
+    else if (default_out_suffix == "wav"){
+        ui->wav_radioButton->setChecked(true);
+    }
+    
+    else if (default_out_suffix == "mp4"){
+        ui->mp4_radioButton->setChecked(true);
+    }else{
+        ui->default_radioButton->setChecked(true);
+    }
+    
+    //输出类型关联
+    connect(ui->suffix_buttonGroup, QOverload<QAbstractButton*>::of(&QButtonGroup::buttonClicked),
+            [&](QAbstractButton *button) {
+        QString out_suffix = "default";
+        //判断逻辑
+        if (button == ui->mp3_radioButton) {
+            out_suffix = "mp3";
+        }
+        else if(button == ui->wav_radioButton) {
+            out_suffix = "wav";
+        }
+        else if(button == ui->mp4_radioButton) {
+            out_suffix = "mp4";
+        }else{
+            out_suffix = "default";
+        }
+        //储存起来
+        default_out_suffix = out_suffix;
+        settings.setValue(QSettings_KEY_AVS_OutType_suffix, default_out_suffix);
+        
+    });
+    
+    
+    
+}
+    

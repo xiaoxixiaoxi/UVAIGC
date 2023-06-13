@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(UVAIGC VERSION 1.0 LANGUAGES CXX)
+project(UVAIGC VERSION 1.1 LANGUAGES CXX)
 
 
 
@@ -14,11 +14,6 @@ ELSEIF (APPLE)
         #构建通用二进制指令
         set(CMAKE_OSX_ARCHITECTURES "x86_64;arm64")
         set(CMAKE_OSX_DEPLOYMENT_TARGET "11.0")
-        #设置 macOS SDK 根目录。
-#        set(CMAKE_OSX_SYSROOT, "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk")
-        #设置代码签名身份
-#        set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY, "Your Code Sign Identity")
-       
 
 ELSEIF (UNIX)
     MESSAGE("是lin系统")
@@ -39,7 +34,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #PROJECT_SOURCE_DIR项目目录
 
 #第三方
-set(DSF_Lib_DIR "${PROJECT_SOURCE_DIR}/Lib")
+#set(DSF_Lib_DIR "${PROJECT_SOURCE_DIR}/Lib")
 IF (WIN32)
           MESSAGE("是win系统")
         set(DSF_Lib_DIR "${PROJECT_SOURCE_DIR}/Lib/WINLib")
@@ -49,6 +44,13 @@ ELSEIF (APPLE)
         MESSAGE("是苹果系统")
         set(DSF_Lib_DIR "${PROJECT_SOURCE_DIR}/Lib/MACLib")
         set(ONNX_Lib_DIR "${DSF_Lib_DIR}/onnxruntime-osx-universal2-1.14.1")
+
+
+
+
+
+
+
 
 
 ELSEIF (UNIX)
@@ -73,6 +75,8 @@ include_directories("${PROJECT_SOURCE_DIR}/SettingSpanel/MyIAP_C/aes/plusaes")
 include_directories("${PROJECT_SOURCE_DIR}/SettingSpanel/MyIAP_C/httphttp")
 include_directories("${PROJECT_SOURCE_DIR}/user/UserModule")
 include_directories("${PROJECT_SOURCE_DIR}/user")
+include_directories("${PROJECT_SOURCE_DIR}/SR")
+include_directories("${PROJECT_SOURCE_DIR}/SRUI")
 
 #message("${DSF_Lib_DIR}自己德行message to display" )
 
@@ -102,6 +106,8 @@ set(PROJECT_SOURCES
         Basis/TaskBasis.hpp
         Basis/SRTQTime.cpp
         Basis/SRTQTime.h
+        Basis/OperationCanceledException.h
+        Basis/zip_file.hpp
         AudioVocalSeparation/AudioVocalSeparation.cpp
         AudioVocalSeparation/AudioVocalSeparation.hpp
         
@@ -147,6 +153,8 @@ set(PROJECT_SOURCES
         AudioVocalSeparationUI/VideoQtWidgets.cpp
         AudioVocalSeparationUI/VideoQtWidgets.h
         AudioVocalSeparationUI/VideoQtWidgets.ui
+        AudioVocalSeparationUI/AVS_TaskCustomItem.hpp
+        AudioVocalSeparationUI/AVS_TaskCustomItem.cpp
         
         
         #avs界面
@@ -176,6 +184,9 @@ set(PROJECT_SOURCES
        SettingSpanel/Download/DownloadTool.h
        SettingSpanel/IAP_and_update/UpdateManager/UpdateManager.cpp
        SettingSpanel/IAP_and_update/UpdateManager/UpdateManager.hpp
+        SettingSpanel/general_settings_widgets.cpp
+        SettingSpanel/general_settings_widgets.h
+        SettingSpanel/general_settings_widgets.ui
        #用户
        user/UserModule/UserModule.cpp
        user/UserModule/UserModule.hpp
@@ -198,6 +209,35 @@ set(PROJECT_SOURCES
       user/UserDeviceCustomDialog.hpp
 
       UVAIGC.rc
+     ffmpegtest/ffmpegtest.ui
+     ffmpegtest/ffmpegtest.cpp
+     ffmpegtest/ffmpegtest.h
+
+     #图片视频放大模块
+     SR/sr_esrgan_ncnn_strategy.h
+     SR/sr_esrgan_ncnn_strategy.cpp
+     SR/SR_type.h
+     SR/SR_TaskProcessingStrategy.hpp
+     SR/SR_TaskProcessingStrategy.cpp
+     SR/SR_Task.hpp
+     SR/SR_Task.cpp
+     SR/SR_TaskProcessor_QT.hpp
+     SR/SR_TaskProcessor_QT.cpp
+    Basis/FFMPEG_Strategy.hpp
+    Basis/FFMPEG_Strategy.cpp
+    SRUI/sr_tasklistui_main.cpp
+    SRUI/sr_tasklistui_main.h
+    SRUI/sr_tasklistui_main.ui
+    SRUI/SR_TaskQListWidget.cpp
+    SRUI/SR_TaskQListWidget.h
+    SRUI/SR_TaskCustomItem.hpp
+    SRUI/SR_TaskCustomItem.cpp
+    SRUI/sr_editqtwidgets.h
+    SRUI/sr_editqtwidgets.cpp
+    SRUI/sr_editqtwidgets.ui
+    SettingSpanel/sr_settingqtwidgetsclass.h
+    SettingSpanel/sr_settingqtwidgetsclass.cpp
+    SettingSpanel/sr_settingqtwidgetsclass.ui
          
          
         ${TS_FILES}
@@ -247,6 +287,26 @@ ELSEIF (APPLE)
         MESSAGE("是苹果系统")
         target_link_libraries(UVAIGC PRIVATE "${ONNX_Lib_DIR}/lib/libonnxruntime.dylib")
         target_link_libraries(UVAIGC PRIVATE "${DSF_Lib_DIR}/fftw3/lib/libfftw3.a")
+
+
+        #        //添加ffmpeg
+        # 将要打包的文件复制到应用程序的Resources文件夹
+        add_custom_command(TARGET UVAIGC POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy
+                "${DSF_Lib_DIR}/ffmpeg/ffmpeg"
+                "$<TARGET_FILE_DIR:UVAIGC>/../Resources/ffmpeg"
+        )
+
+
+    add_custom_command(TARGET UVAIGC POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+            "${DSF_Lib_DIR}/realesrgan/realesrgan-ncnn-vulkan"
+            "$<TARGET_FILE_DIR:UVAIGC>/../Resources/realesrgan-ncnn-vulkan"
+    )
+
+
+        
+        
 
 ELSEIF (UNIX)
     MESSAGE("是lin系统")

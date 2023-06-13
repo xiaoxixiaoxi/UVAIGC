@@ -8,9 +8,9 @@
 #include "../AudioVocalSeparation/AVS_Task.hpp"
 
 
+#include "AVS_TaskCustomItem.hpp"
 
-
-#include "TaskCustomItem.h"
+//#include "TaskCustomItem.h"
 #include <QMenu>
 
 #include <QProcess>

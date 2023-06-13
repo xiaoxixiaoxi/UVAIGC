@@ -13,12 +13,17 @@
 #include "user/UserModule/UserModule.hpp"
 #include "user/UserMainWindow.h"
 #include <QMenuBar>
+
+#include "SR/sr_esrgan_ncnn_strategy.h"
+#include "SettingSpanel/sr_settingqtwidgetsclass.h"
 //添加一个注释纯纯粹粹 win修改
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     
-    QCoreApplication::setApplicationVersion("1.0");
+    QCoreApplication::setApplicationVersion("1.1");
+
+//    SR_ESRGAN_ncnn_Strategy sr_obj;
     
     //检查更新
     QTimer::singleShot(2000, &a, [=]() {
@@ -84,6 +89,9 @@ int main(int argc, char *argv[])
     
     //语言设置
 //    QLocale locale;
+
+//    SR_settingqtwidgetsclass sr_s;
+//    sr_s.show();
 
 
 

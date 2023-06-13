@@ -15,6 +15,7 @@
 #include <qeventloop.h>
 #include "../Basis/TaskBasis.hpp"
 #include "../AudioVocalSeparation/AVS_Task.hpp"
+#include "../SR/SR_Task.hpp"
 
 #include <stdio.h>
 class AVS_Task_QTtool
@@ -24,13 +25,18 @@ public:
 //    ~AVS_Task_QTtool();
     
     //获取信息
-    //判断是否能导入
+    //判断是否能导入 音频分离的
     static bool if_hasVideo(AVS_Task& obj,QUrl url);
+
+    //超分辨率的
+    static bool SR_if_hasVideo(SR_Task& obj,QUrl url);
 //    bool if_hasVideo(QUrl url);
     
     
     //显示媒体基本信息
     static QString getShowInfo(AVS_Task* obj);
+    static QString getShowInfo(TaskBasis* obj);
+    static QString getShowInfo(SR_Task* obj);
     
     
     //显示在本地文件的方法

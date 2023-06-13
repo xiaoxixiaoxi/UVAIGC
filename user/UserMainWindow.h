@@ -5,6 +5,9 @@
 #include "UserModule/UserModule.hpp"
 #include "loginwindow.h"
 
+//等待标识
+#include "../AudioVocalSeparationUI/QProgressIndicator.h"
+
 namespace Ui {
 class UserMainWindow;
 }
@@ -35,6 +38,9 @@ private:
     LoginWindow loginwin;
     
     RegisterWndow registerWin;
+    
+    
+    QProgressIndicator *pIndicator = nullptr;
 };
 
 #endif // USERMAINWINDOW_H

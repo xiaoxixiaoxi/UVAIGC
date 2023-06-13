@@ -91,6 +91,9 @@ public:
     QString device_uuid;
     QString device_name;
     QString client_type;
+    
+    //请求前执行函数
+    void start_netSignals();
 
 
 signals:
@@ -143,6 +146,12 @@ signals:
     
     // 定义一个信号。权限有变化就通知
     void UpdataDataSig();
+    
+    
+    
+    //定义一个更新ui进度用的 开始请求 和 结束请求
+    void start_qProgressSig();//开启
+    void end_qProgressSig();//结束
     
     
     

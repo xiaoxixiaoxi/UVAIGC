@@ -15,7 +15,7 @@ DownloadListOBJ::~DownloadListOBJ()
 
 void DownloadListOBJ::init_obj(QString name, QString info, QString d_url, QString save_path)
 {
-	//╩Ях║нд╪ЧцШЁф м╗╧Щurl   еп╤о╠╬╣ьнд╪Чйг╥Я╢Фтз
+	//О©╫О©╫х║О©╫д╪О©╫О©╫О©╫О©╫О©╫ м╗О©╫О©╫url   О©╫п╤о╠О©╫О©╫О©╫О©╫д╪О©╫О©╫г╥О©╫О©╫О©╫О©╫
 
 	this->name = name;
 	this->info = info;
@@ -49,14 +49,14 @@ void DownloadListOBJ::init_obj(QString name, QString info, QString d_url, QStrin
 		emit updataSig();
 
 		});
-	// мЙЁи
+	// О©╫О©╫О©╫
 	connect(dT, &DownloadTool::sigDownloadFinished, this, [=]() {
 		this->isDownloading = false;
 
-		//рф╤╞нд╪Ч
+		//О©╫ф╤О©╫О©╫д╪О©╫
 		QString old_name = this->TemDir + "/" + this->name ;
 		QString new_name = this->save_path + "/" + this->name;
-		//еп╤опбнд╪Чйг╥Я╢Фтз ╢Фтзи╬╣Т
+		//О©╫п╤О©╫О©╫О©╫О©╫д╪О©╫О©╫г╥О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫и╬О©╫О©╫
 		QFileInfo f_newname(new_name);
 		if (f_newname.isFile() && old_name != new_name) {
 			QFile::remove(new_name);
@@ -67,30 +67,30 @@ void DownloadListOBJ::init_obj(QString name, QString info, QString d_url, QStrin
 
 		emit updataSig();
 		});
-	//╟С╤╗пе╨е
+	//О©╫О©╫О©╫е╨О©╫
 
 
 }
 
-//╡И©╢╠╬╣ьнд╪Чйг╥Я╢Фтз
+//О©╫И©╢О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫г╥О©╫О©╫О©╫О©╫
 void DownloadListOBJ::isBenDiFile() {
 
 	const QUrl newUrl = QUrl::fromUserInput(this->d_url);
 
 	QFileInfo fileinfo = QFileInfo(this->d_url);
-	//нд╪ЧцШ
+	//О©╫д╪О©╫О©╫О©╫
 	QString file_name = fileinfo.fileName();
-	//╠ИюЗнд╪Ч╪п
-	QDir dir(save_path);   //QDir╣дб╥╬╤р╩╤╗р╙йгх╚б╥╬╤ё╛оЮ╤тб╥╬╤╩Асп╢МнС
+	//О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫О©╫
+	QDir dir(save_path);   //QDirО©╫О©╫б╥О©╫О©╫р╩О©╫О©╫р╙О©╫О©╫х╚б╥О©╫О©╫О©╫О©╫О©╫О©╫О©╫б╥О©╫О©╫О©╫О©╫О©╫п╢О©╫О©╫О©╫
 	if (!dir.exists()) {
 
 	}
 	else
 	{
-		//х║╣╫кЫсп╣днд╪Ч╨мнд╪ЧцШё╛х╔╣Т.╨м..нд╪Ч╪п
+		//х║О©╫О©╫О©╫О©╫О©╫п╣О©╫О©╫д╪О©╫О©╫О©╫О©╫д╪О©╫О©╫О©╫О©╫О©╫х╔О©╫О©╫.О©╫О©╫..О©╫д╪О©╫О©╫О©╫
 		dir.setFilter(QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot);
 		dir.setSorting(QDir::DirsFirst);
-		//╫╚фДв╙╩╞н╙р╩╦Жlist
+		//О©╫О©╫О©╫О©╫в╙О©╫О©╫н╙р╩О©╫О©╫list
 		QFileInfoList list = dir.entryInfoList();
 		for (auto i : list) {
 			if (i.fileName() == file_name) {
@@ -112,6 +112,7 @@ bool DownloadListOBJ::startDownload()
 	
 	//dT = new DownloadTool(url, this->model_save_path);
 	//
+ 
 	dT->startDownload();
 	isDownloading = true;
 	emit updataSig();
@@ -133,7 +134,8 @@ void DownloadListOBJ::set_savePath(QString new_path)
 {
 	this->isDownloaded = false;
 	this->save_path = new_path;
-	// рРн╙╡исцобтьмЙЁирф╤╞╣╫д©╠Йнд╪Ч╪п  кЫсп ╦Эпбд©б╪ тыуБ╠ъ╬м©ирт
+	// О©╫О©╫н╙О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ф╤О©╫О©╫О©╫д©О©╫О©╫О©╫д╪О©╫О©╫О©╫  О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫д©б╪ О©╫О©╫О©╫О©╫ъ╬м©О©╫О©╫О©╫
+    qDebug () << "Д©²Е╜≤Х╥╞Е╬└" << this->save_path;
 
 	isBenDiFile();
 	emit  updataSig();

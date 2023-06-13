@@ -70,6 +70,8 @@ public:
     // 关联输出类型
     //分离类型选择
     void set_default_Models_Type_list();
+    //输出类型
+    void init_OutType_suffix();
 
 
 public slots:

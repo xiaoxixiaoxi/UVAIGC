@@ -88,6 +88,9 @@
       </spacer>
      </item>
      <item>
+      <layout class="QHBoxLayout" name="qProg_horizontalLayout"/>
+     </item>
+     <item>
       <widget class="QPushButton" name="loan_pushButton">
        <property name="text">
         <string>登录</string>

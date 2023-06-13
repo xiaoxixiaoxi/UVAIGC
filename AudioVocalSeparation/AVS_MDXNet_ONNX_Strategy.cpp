@@ -10,9 +10,13 @@
 //#include  <QSysInfo>
 //判断平台用的
 #include <QObject>
+#include <QTemporaryFile>
+#include <QDebug>
 
 
-AVS_MDXNet_ONNX_Strategy::AVS_MDXNet_ONNX_Strategy(AVS_LoaderFile* m_fileLoader)
+
+AVS_MDXNet_ONNX_Strategy::AVS_MDXNet_ONNX_Strategy(QObject *parent, AVS_LoaderFile* m_fileLoader)
+: QObject(parent), AVS_TaskProcessingStrategy()
 {
 //    this->type = AVS_MDXNet;
     
@@ -25,7 +29,25 @@ AVS_MDXNet_ONNX_Strategy::AVS_MDXNet_ONNX_Strategy(AVS_LoaderFile* m_fileLoader)
         this->setLoaderFile(m_fileLoader);
         
     }
-   
+    
+    
+    
+    ffmpeg_obj  = new  FFMPEG_Strategy(this);
+        
+//      //进度计算
+//    connect(ffmpeg_obj,&FFMPEG_Strategy::progress,this,[=](float jd ,int tag){
+//        //
+//        if (tag == 1){
+//            ffmpeg_load_jd = jd;
+//
+//        }else if (tag == 2){
+//            ffmpeg_out_jd = jd;
+//        }
+////        qDebug() << "进d: " << jd << tag;
+//        setProgress();
+//
+//    });
+//
     
     
 
@@ -549,7 +571,8 @@ void AVS_MDXNet_ONNX_Strategy::processTask( TaskBasis& task) {
             run(avsTask, session_Instrumental, loadedAudio, Instrumental_signal);
             
             std::string name2 = "_Instrumental";
-            savefile(avsTask,Instrumental_signal,name2);
+            //savefile(avsTask,Instrumental_signal,name2);
+            savefileFmpeg(avsTask,Instrumental_signal,name2);
             
             
         }
@@ -560,7 +583,8 @@ void AVS_MDXNet_ONNX_Strategy::processTask( TaskBasis& task) {
             run(avsTask, session_Vocals, loadedAudio,  Vocals_signal);
             
             std::string name2 = "_Vocals";
-            savefile(avsTask,Vocals_signal,name2);
+            //savefile(avsTask,Vocals_signal,name2);
+            savefileFmpeg(avsTask,Vocals_signal,name2);
             
         }
         //添加其他的
@@ -626,5 +650,117 @@ bool AVS_MDXNet_ONNX_Strategy::savefile(AVS_Task& avsTask,std::vector<std::vecto
     }
     
     return is_save;
+}
+
+//添加一个合成
+
+bool AVS_MDXNet_ONNX_Strategy::savefileFmpeg(AVS_Task& avsTask,std::vector<std::vector<double>>& signal,std::string& name2){
+    
+    bool is_save = false;
+    if(avsTask.getState() == TaskBasis::Running){
+        AVS_SaveParams saveParams;
+        std::string outpath = avsTask.getAvailableFilePath(avsTask.out_path_dir, avsTask.getName() + name2, avsTask.outType);
+        saveParams.filePath = outpath;
+        saveParams.audioData = &signal;
+        saveParams.sampleRate = 44100;
+        
+        //保存成一个临时文件,再去合成
+        QTemporaryFile tempFile;
+        tempFile.setFileTemplate(tempFile.fileTemplate() + ".wav");
+        
+        if (!tempFile.open()) {
+            avsTask.set_stateError();
+            return false;
+        }
+        
+        //保存下来
+        AudioFile<double> out_audioFile;
+        out_audioFile.setSampleRate(saveParams.sampleRate);
+        AudioFile<double>::AudioBuffer buffer;
+        bool ok = out_audioFile.setAudioBuffer (*saveParams.audioData);
+        // 获取临时文件的路径
+        QString filePath = tempFile.fileName();
+        qDebug() << "Temporary file path:" << filePath;
+        
+        if (!out_audioFile.save(filePath.toStdString())){
+            //保存失败
+            avsTask.set_stateError();
+            avsTask.setOutInfo(QObject::tr("错误!音频保存失败").toStdString());
+            return false;
+        }
+        
+        
+        QStringList cmd;
+        //应该按后缀名来判断
+        if (avsTask.media_type==TaskBasis::Audio){
+            
+            cmd << "-i" << filePath  << QString::fromStdString(outpath);
+            
+        }else if (avsTask.media_type==TaskBasis::Video){
+            
+            QString raw_path = QString::fromStdString(avsTask.getUrl());
+            //判断是不是音频类型
+            QStringList audioExtensions = {"mp3", "wav", "ogg"}; // 音频文件的后缀名列表
+            QString suffix = QString::fromStdString(avsTask.outType);
+            bool isAudio = false;
+            for (const QString& role : audioExtensions) {
+                if (role  == suffix) {
+                    isAudio = true;
+                    break;
+                }
+            }
+            
+            
+            if (isAudio==true){
+                cmd << "-i" << filePath  << QString::fromStdString(outpath);
+            }else{
+                
+                cmd << "-i" <<  filePath;
+                cmd << "-ss" << QString::number(avsTask.timeRange_in/1000.0,'f',3) ;
+                cmd << "-to" << QString::number(avsTask.timeRange_out/1000.0,'f',3);
+                cmd << "-i" << raw_path ;
+                cmd << "-map" << "0:a:0" ;
+                cmd << "-map" << "1:v:0" ;
+                cmd << "-c:v" << "copy" ;
+        //        cmd << "-c:v" << "0" ;
+                cmd << "-pix_fmt" << "yuv420p" ;
+                cmd << QString::fromStdString(outpath) ;
+                
+            }
+           
+            
+        }
+        
+        
+        
+        
+        //区分开 视频 和 音频(看要拷贝属性吗)
+        
+        
+        //绑定信号然后等待完成
+        ffmpeg_obj->runProcess(cmd,2);
+        
+        if (!ffmpeg_obj->getIs_finish()){
+            // 没有完成处理
+            avsTask.set_stateError();
+            avsTask.setOutInfo(QObject::tr("错误!视频文件合成失败").toStdString());
+            return false;
+        }
+        
+        //保存下来后面可以
+        avsTask.out_path_list.push_back(saveParams.filePath);
+        
+        
+        is_save = true;
+        
+        // 删除临时文件
+//        tempFile.remove();
+        
+        
+        
+    }
+    
+    return is_save;
+    
 }
 

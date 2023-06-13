@@ -62,6 +62,24 @@ public:
     
     
     
+    //1.1版本新加的
+    enum Media_type {
+        Video,
+        Image,
+        Audio
+
+    };
+    //媒体类型 视频 还是图片
+    Media_type media_type;
+    void setMedia_type(Media_type _media_type){
+        media_type = _media_type;
+        
+    };
+    //输出格式
+    std::string outType;
+    
+    
+    
 
 
 protected:

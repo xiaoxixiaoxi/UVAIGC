@@ -88,19 +88,30 @@ MainWindow::MainWindow(QWidget *parent)
     setSvgIcon(ui->user_toolButton, ":/new/1_1image/Resource/image/UVAIGC/person.crop.circle.fill.svg", iconColor, iconSize);
     setSvgIcon(ui->user_toolButton, ":/new/1_1image/Resource/image/UVAIGC/person.crop.circle.fill.svg", iconColor, iconSize);
     setSvgIcon(ui->toMoreTool_toolButton, ":/new/prefix1/Resource/image/winOCRUI/link.svg", iconColor, iconSize*0.7);
+     setSvgIcon(ui->SR_toolButton, ":/new/1_1image/Resource/image/UVAIGC/SR_icon.svg", iconColor, iconSize);
     
     ui->home_toolButton->setProperty("current", 0);
     ui->avs_toolButton->setProperty("current", 1);
     ui->setting_toolButton->setProperty("current", 2);
     ui->user_toolButton->setProperty("current", 3);
+
+    ui->ffmpeg_toolButton->setProperty("current", 4);
+    //隐藏
+    ui->ffmpeg_toolButton->setVisible(false);
+    //超
+    ui->SR_toolButton->setProperty("current", 5);
     
     ui->toMoreTool_toolButton->setProperty("current", 100);
     
-    buttonList = { ui->home_toolButton,ui->avs_toolButton,ui->setting_toolButton,ui->user_toolButton};
+    buttonList = { ui->home_toolButton,ui->avs_toolButton,ui->setting_toolButton,ui->user_toolButton,ui->ffmpeg_toolButton,ui->SR_toolButton};
     
     
-    
+
     ui->stackedWidget->addWidget(&avs_Wnd);
+     ui->stackedWidget->addWidget(&sr_task_Wnd);
+
+    ui->stackedWidget-> addWidget(&ffmpeg_Wnd);
+
     ui->stackedWidget->addWidget(&settingWnd);
     ui->stackedWidget->addWidget(&userWnd);
     
@@ -113,18 +124,39 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->avs_toolButton, &QToolButton::clicked, this, &MainWindow::toAvs_Wnd);
     
     connect(ui->home_toolButton, &QToolButton::clicked, this, &MainWindow::toHome_Wnd);
+
+    connect(ui->ffmpeg_toolButton, &QToolButton::clicked, this, &MainWindow::toffmpeg_Wnd);
+
+    connect(ui->SR_toolButton, &QToolButton::clicked, this, &MainWindow::toSR_Wnd);
+
     
     
     //绑定avs设置信号 &avs_mdxnet_onnx_Strategy
     connect(&avs_Wnd,&TaskListWidgetsClass::toSettingSpanelQtWidgetsClass_AVS_WIN_Sig,this,[=](AVS_MDXNet_ONNX_Strategy * avs_strategy){
         
-//        TODO: 添加指定音频分离面板
+
         settingWnd.ui.avs_setup_widget->set_Strategy(avs_strategy);
         toSettingWnd();
+        //添加指定音频分离面板
+        settingWnd.ui.tabWidget->setCurrentWidget(settingWnd.ui.avs_st_tab);
     });
     
     //绑定去用户面板
     connect(&avs_Wnd,&TaskListWidgetsClass::toProwin_Sig,this,[=](){
+        toUserWnd();
+    });
+    
+    //绑定去设置界面 超分辨率
+    connect(&sr_task_Wnd,&SR_TaskListUI_main::toSettingSpanelQtWidgetsClass_SR_WIN_Sig,this,[=](SR_TaskProcessor_QT *strategy){
+        
+//        TODO: 添加指定音频分离面板
+//        settingWnd.ui.avs_setup_widget->set_Strategy(avs_strategy);
+        toSettingWnd();
+        settingWnd.ui.tabWidget->setCurrentWidget(settingWnd.ui.sr_st_tab);
+    });
+
+    //绑定去用户面板
+    connect(&sr_task_Wnd,&SR_TaskListUI_main::toProwin_Sig,this,[=](){
         toUserWnd();
     });
 
@@ -162,6 +194,16 @@ MainWindow::MainWindow(QWidget *parent)
          qDebug()<<"浅色";
         ui->label_4->setStyleSheet("#label_4 {background-image: url(:/new/1_1image/Resource/image/bj.png); background-repeat: no-repeat; background-position: center;border-radius: 10px;box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);letter-spacing: 5px;}");
     }
+    
+    
+    //后台偷偷加载一下ffmpeg,后面添加文件就不需要等待了
+   
+    
+    
+    
+//    QTimer::singleShot(3, this, [=](){
+//        ffmpeg_obj.loadFfmpegBin();
+//    });
 
 
 
@@ -229,6 +271,22 @@ void MainWindow::toHome_Wnd(){
     
 }
 
+void MainWindow::toffmpeg_Wnd(){
+
+    ui->stackedWidget->setCurrentWidget(&ffmpeg_Wnd);
+    setCurrentButton(4);
+
+
+}
+void MainWindow::toSR_Wnd(){
+
+    ui->stackedWidget->setCurrentWidget(&sr_task_Wnd);
+    setCurrentButton(5);
+
+
+}
+
+
 
 void MainWindow::on_action_triggered()
 {
@@ -248,4 +306,6 @@ void MainWindow::on_toMoreTool_toolButton_clicked()
 {
     QDesktopServices::openUrl(QUrl(QString::fromStdString(TO_URL_MoreAPP)));
 }
+
+
 

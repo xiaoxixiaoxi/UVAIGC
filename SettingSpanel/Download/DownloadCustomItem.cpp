@@ -1,4 +1,5 @@
 #include "DownloadCustomItem.h"
+#include <QMessageBox>
 
 DownloadCustomItem::DownloadCustomItem(QWidget *parent)
 	: QWidget(parent)
@@ -18,6 +19,27 @@ DownloadCustomItem::DownloadCustomItem(DownloadListOBJ * Download_obj, int tag)
 
 	//下载按钮绑定
 	connect(ui.pushButton, &QPushButton::clicked, this, [=]() {
+        
+        //判断文件夹是否存在 不存在就提示并返回
+        QString save_path = this->Download_obj->save_path;
+        // 判断文件夹是否存在 没有就提示
+        QDir dir(save_path);
+        if (dir.exists()) {
+            // 文件夹存在
+            // TODO: 继续处理逻辑
+        } else {
+            
+            QMessageBox msgBox;
+            msgBox.setIcon(QMessageBox::Warning);
+            msgBox.setText( tr("错误!输出目录不存在")+"\n"+ save_path +"\n" + tr("请重新设置保存路径"));
+            QPushButton *connectButton = msgBox.addButton(tr("OK"), QMessageBox::ActionRole);
+            msgBox.exec();
+            
+            
+            
+            return;
+        }
+        
 		
 		if (Download_obj->isDownloading  == true) {
 			this->Download_obj->stopDownload();

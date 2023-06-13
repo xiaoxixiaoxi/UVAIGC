@@ -57,7 +57,10 @@ UserModule::UserModule(QObject* parent) : QObject(parent) {
     getWebSuperMember();
     
 }
-
+//信号开启请求前
+void UserModule::start_netSignals(){
+    emit start_qProgressSig();
+}
 
 
 void UserModule::login(const QString& email, const QString& password) {
@@ -80,9 +83,15 @@ void UserModule::login(const QString& email, const QString& password) {
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
     networkManager.post(request, requestData);
+    //开启请求执行 信号用
+    start_netSignals();
 }
 
 void UserModule::handleALLResponse(QNetworkReply* reply) {
+    //请求完成
+    emit end_qProgressSig();
+    
+    //逻辑处理
     if (reply->error() == QNetworkReply::NoError) {
         
         
@@ -219,6 +228,8 @@ void UserModule::getRegisterCode(const QString& username, const QString& email) 
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
     networkManager.post(request, requestData);
+    //开启请求执行 信号用
+    start_netSignals();
 }
 
 void UserModule::handlegetRegisterCodeResponse(QNetworkReply* reply) {
@@ -269,6 +280,8 @@ void UserModule::emailRegister(const QString& username, const QString& email,con
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
     networkManager.post(request, requestData);
+    //开启请求执行 信号用
+    start_netSignals();
 }
 void UserModule::handlegetEmailRegisterResponse(QNetworkReply* reply) {
     if (reply->error() == QNetworkReply::NoError) {
@@ -310,6 +323,7 @@ void UserModule::getWebIsPro(){
     
 
     networkManager.get(request);
+    
 }
 //会员准备不用
 void UserModule::handleGetIsProResponse(QNetworkReply* reply) {
@@ -358,6 +372,8 @@ void UserModule::getWebUserInfo() {
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
     networkManager.get(request);
+    //开启请求执行 信号用
+    start_netSignals();
 }
 
 void UserModule::handleGetUserInfoResponse(QNetworkReply* reply) {
@@ -412,6 +428,8 @@ void UserModule::getApppermission() {
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
     networkManager.get(request);
+    //开启请求执行 信号用
+    start_netSignals();
 }
 void UserModule::handlegetAppPermissionResponse(QNetworkReply* reply) {
     if (reply->error() == QNetworkReply::NoError) {
@@ -513,6 +531,7 @@ void  UserModule::getWebSuperMember(){
 
     // 发送同步请求
    QNetworkReply *reply =networkManager.get(request);
+   
     
     // 设置超时时间
     int timeout = 5000; // 设置超时时间为5秒
@@ -664,6 +683,8 @@ void UserModule::postTokenRefresh(){
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
     networkManager.post(request, requestData);
+    //开启请求执行 信号用
+    start_netSignals();
     
 }
 void UserModule::handleTokenRefreshResponse(QNetworkReply* reply) {
@@ -726,6 +747,8 @@ void UserModule::getWebDevicelist() {
     request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
     networkManager.get(request);
+    //开启请求执行 信号用
+    start_netSignals();
 }
 void UserModule::handleGetWebDevicelistResponse(QNetworkReply* reply) {
     if (reply->error() == QNetworkReply::NoError) {

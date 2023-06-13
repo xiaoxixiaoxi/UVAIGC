@@ -32,11 +32,21 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
-     <widget class="QWidget" name="tab">
+     <widget class="QWidget" name="g_st_tab">
+      <attribute name="title">
+       <string>通用设置</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="General_settings_Widgets" name="widget_2" native="true"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="avs_st_tab">
       <attribute name="icon">
-       <iconset>
+       <iconset resource="../Resource.qrc">
         <normaloff>:/new/1_1image/Resource/image/winOCRUI/1.1/waveform.svg</normaloff>:/new/1_1image/Resource/image/winOCRUI/1.1/waveform.svg</iconset>
       </attribute>
       <attribute name="title">
@@ -63,6 +73,31 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="sr_st_tab">
+      <attribute name="title">
+       <string>超分辨率设置</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="SR_settingqtwidgetsclass" name="widget" native="true"/>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </item>
   </layout>
@@ -75,7 +110,21 @@
    <header>avs_settingqtwidgetsclass.h</header>
    <container>1</container>
   </customwidget>
+  <customwidget>
+   <class>SR_settingqtwidgetsclass</class>
+   <extends>QWidget</extends>
+   <header>sr_settingqtwidgetsclass.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>General_settings_Widgets</class>
+   <extends>QWidget</extends>
+   <header>general_settings_widgets.h</header>
+   <container>1</container>
+  </customwidget>
  </customwidgets>
- <resources/>
+ <resources>
+  <include location="../Resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

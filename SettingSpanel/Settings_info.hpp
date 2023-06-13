@@ -31,9 +31,17 @@ extern const QString QSettings_KEY_AVS_Drums_selection_name;
 extern const QString QSettings_KEY_AVS_Other_selection_name;
 //默认识别的列表
 extern const QString QSettings_KEY_AVS_OutType_list;
+//输出后缀名
+extern const QString QSettings_KEY_AVS_OutType_suffix;
 
 //extern const QString QSettings_KEY_AVS_selection_language;
 
+//超分辨率相关参数
+extern const QString QSettings_KEY_SR_model_save_path;
+extern const QString QSettings_KEY_SR01_selection_model_name;
+extern const QString   QSettings_KEY_SR_Image_OutType;
+extern const QString   QSettings_KEY_SR_Video_OutType;
+extern const std::string TO_URL_SR_Download_Help01;
 
 
 //更新信息用

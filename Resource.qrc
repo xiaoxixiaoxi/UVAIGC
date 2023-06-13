@@ -23,6 +23,7 @@
         <file>Resource/image/winOCRUI/ExportSRT.svg</file>
         <file>Resource/image/winOCRUI/ExportTXT.svg</file>
         <file>Resource/image/winOCRUI/Export.svg</file>
+        <file>Resource/image/winOCRUI/questionmark.circle_red.svg</file>
     </qresource>
     <qresource prefix="/new/1_1image">
         <file>Resource/image/winOCRUI/1.1/arrow.down.circle.fill.svg</file>
@@ -39,6 +40,7 @@
         <file>Resource/image/bj.png</file>
         <file>Resource/image/App Store-512@2x.png</file>
         <file>Resource/image/App-Store-512_2x.ico</file>
+        <file>Resource/image/UVAIGC/SR_icon.svg</file>
     </qresource>
     <qresource prefix="/i18n">
         <file>translations/UVAIGC_es_US.qm</file>

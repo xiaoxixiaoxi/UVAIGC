@@ -3,11 +3,26 @@
 #include <QMessageBox>
 #include <QTimer>
 
+
+
 UserMainWindow::UserMainWindow(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::UserMainWindow)
 {
     ui->setupUi(this);
+    
+    //等待动画
+    pIndicator = new QProgressIndicator(this);
+    pIndicator->setColor(Qt::gray);
+    pIndicator->startAnimation();
+    pIndicator->setVisible(false);
+    
+    ui->qProg_horizontalLayout->addWidget(pIndicator);
+//    ui->qProg_widget->setParent(pIndicator);
+    
+//    ui->qProg_widget
+    
+    
     init_UserModule();
     
     
@@ -67,6 +82,18 @@ void UserMainWindow::init_UserModule(){
     
     loginwin.init_userModule(this->user_obj);
     registerWin.init_userModule(this->user_obj);
+    
+    //绑定ui等待
+    QObject::connect( this->user_obj,&UserModule::end_qProgressSig,this,[=](){
+        //结束
+        pIndicator->setVisible(false);
+        
+    });
+    QObject::connect( this->user_obj,&UserModule::start_qProgressSig,this,[=](){
+        //开始
+        pIndicator->setVisible(true);
+//        pIndicator->startAnimation();
+    });
     
     
     

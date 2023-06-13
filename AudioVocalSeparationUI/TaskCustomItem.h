@@ -8,7 +8,7 @@
 #include <QPainter>
 
 #include "VideoQtWidgets.h"
-
+#include "ui_TaskCustomItem.h"
 
 //∂®“Â“ª∏ˆÕº∆¨∂‘œÛ
 class MyImage {
@@ -119,9 +119,12 @@ public:
     ~TaskCustomItem();
     //自定义接口
     TaskCustomItem(TaskBasis* task,int tag);
-    void relink_file();
+
+     // 使函数成为虚函数
+    virtual  void relink_file();
     //À¢–¬ ˝æ› ∞— ˝æ›œ‘ æ‘⁄ΩÁ√Ê…œ
-    void reloadData();
+    virtual void reloadData();
+    virtual void openEditWin();
 
     int tag = -1;
     TaskBasis* task;
@@ -134,13 +137,13 @@ public:
     //编辑窗口页面
     VideoQtWidgets* editW = nullptr;
     
-    void openEditWin();
+
     
-    
+    Ui::TaskCustomItem *ui;
     
 
 private:
-    Ui::TaskCustomItem *ui;
+//    Ui::TaskCustomItem *ui;
 };
 
 #endif // TASKCUSTOMITEM_H

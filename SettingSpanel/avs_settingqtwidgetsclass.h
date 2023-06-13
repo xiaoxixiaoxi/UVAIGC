@@ -50,6 +50,10 @@ public:
     void verifyModel();
 
     void upDataDownloadListOBJ_list();
+    
+    
+    //配置输出后缀名
+    void init_OutType_suffix();
 
 
 private:
@@ -84,6 +88,9 @@ private:
     QString default_Models_Type_list;
     QString KEY_AVS_OutType_list = QSettings_KEY_AVS_OutType_list;
     
+    
+    //输出后缀名
+    QString default_out_suffix;
     
     //下载对象
     QVector<DownloadListOBJ*> downloadListOBJ_list;

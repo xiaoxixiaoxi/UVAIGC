@@ -52,9 +52,9 @@ void TaskQListWidget::reloadData()
         
 //        AVS_Task* obj =  avs_Tasks->data()[i];
         AVS_Task& obj = (*avs_Tasks)[i];
-        TaskCustomItem * item_DIY = new  TaskCustomItem(&obj,i);
+        AVS_TaskCustomItem * item_DIY = new  AVS_TaskCustomItem(&obj,i);
 
-        connect(item_DIY, &TaskCustomItem::editpushButt,
+        connect(item_DIY, &AVS_TaskCustomItem::editpushButt,
                 this, [=](int tag) {
                     emit editpushButt(tag);
                 });
@@ -109,7 +109,7 @@ void TaskQListWidget::del()
         QListWidgetItem* item = items[items.count()-1-i];//被选中或背点击的item删除
         //    QListWidgetItem* item = ui->listWidget->takeItem(2);//指定删除
 
-        TaskCustomItem* myitem = (TaskCustomItem*)itemWidget(item);
+        AVS_TaskCustomItem* myitem = (AVS_TaskCustomItem*)itemWidget(item);
         int tag = myitem->tag;
 
         this->removeItemWidget(item);
@@ -153,7 +153,7 @@ void TaskQListWidget::updataUI() {
         QListWidgetItem* _item = this->item(i);//被选中或背点击的item删除
         //    QListWidgetItem* item = ui->listWidget->takeItem(2);//指定删除
 
-        TaskCustomItem* myitem = (TaskCustomItem*)itemWidget(_item);
+        AVS_TaskCustomItem* myitem = (AVS_TaskCustomItem*)itemWidget(_item);
 
         myitem->reloadData();
     }
@@ -211,6 +211,14 @@ void TaskQListWidget::openEdit() {
     for (size_t i = 0; i < items.count(); i++)
     {
         int index = this->row(items[i]);
+        
+        
+        QListWidgetItem* _item = this->item(index);//被选中或背点击的item删除
+        //    QListWidgetItem* item = ui->listWidget->takeItem(2);//指定删除
+
+        AVS_TaskCustomItem* myitem = (AVS_TaskCustomItem*)itemWidget(_item);
+        myitem->openEditWin();
+
         
         
        

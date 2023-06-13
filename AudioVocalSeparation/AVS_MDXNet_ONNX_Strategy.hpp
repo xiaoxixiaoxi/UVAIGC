@@ -22,12 +22,14 @@
 #include <complex>
 
 #include "AVS_Task.hpp"
+#include "../Basis/FFMPEG_Strategy.hpp"
 
 
-class AVS_MDXNet_ONNX_Strategy : public AVS_TaskProcessingStrategy {
-    
+class AVS_MDXNet_ONNX_Strategy :public QObject,public AVS_TaskProcessingStrategy
+{
+    Q_OBJECT
 public:
-    AVS_MDXNet_ONNX_Strategy(AVS_LoaderFile* m_fileLoader = nullptr);
+    explicit AVS_MDXNet_ONNX_Strategy(QObject *parent = nullptr,AVS_LoaderFile* m_fileLoader = nullptr);
     ~AVS_MDXNet_ONNX_Strategy();
     
     // 实现音频分离的具体处理逻辑
@@ -102,6 +104,12 @@ public:
     
     //封装一个文件保存
     bool savefile(AVS_Task& avsTask,std::vector<std::vector<double>>& signal,std::string& name2);
+    //后面就调用这个
+    bool savefileFmpeg(AVS_Task& avsTask,std::vector<std::vector<double>>& signal,std::string& name2);
+    
+    
+    
+    FFMPEG_Strategy* ffmpeg_obj = nullptr;
     
     
     

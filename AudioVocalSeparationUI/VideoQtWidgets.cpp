@@ -337,8 +337,8 @@ bool VideoQtWidgets::myInIt(AVS_Task* mytask) {
 
 
 
-
-
+//设置一下后缀名
+    init_OutType_suffix();
 
 
 
@@ -636,6 +636,55 @@ void  VideoQtWidgets::resizeEvent(QResizeEvent* event)
 
     
 
+}
+
+
+
+void VideoQtWidgets::init_OutType_suffix(){
+    
+    //恢复
+    std::string default_out_suffix =  mytask->outType;
+    if (default_out_suffix == "mp3") {
+        ui.mp3_radioButton->setChecked(true);
+    }
+    else if (default_out_suffix == "wav"){
+        ui.wav_radioButton->setChecked(true);
+    }
+    
+    else if (default_out_suffix == "mp4"){
+        ui.mp4_radioButton->setChecked(true);
+    }else{
+        ui.default_radioButton->setChecked(true);
+    }
+    
+    //输出类型关联
+    connect(ui.suffix_buttonGroup, QOverload<QAbstractButton*>::of(&QButtonGroup::buttonClicked),
+            [&](QAbstractButton *button) {
+        
+        
+        QFileInfo fileInfo = QFileInfo(QString::fromStdString(mytask->getUrl()) );
+        
+        std::string out_suffix = "wav";
+        //判断逻辑
+        if (button == ui.mp3_radioButton) {
+            out_suffix = "mp3";
+        }
+        else if(button == ui.wav_radioButton) {
+            out_suffix = "wav";
+        }
+        else if(button == ui.mp4_radioButton) {
+            out_suffix = "mp4";
+        }else{
+            out_suffix =  fileInfo.suffix().toStdString();
+        }
+        //储存起来
+        mytask->outType =  out_suffix;
+
+        
+    });
+    
+    
+    
 }
 
 

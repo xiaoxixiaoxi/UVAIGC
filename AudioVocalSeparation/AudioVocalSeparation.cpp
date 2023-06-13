@@ -50,7 +50,7 @@ void AudioVocalSeparation::test(){
     
     //新建文件导入模块
     AVS_QTLoaderFile * load = new AVS_QTLoaderFile();
-    AVS_MDXNet_ONNX_Strategy  audioSeparationStrategy(load);
+    AVS_MDXNet_ONNX_Strategy  audioSeparationStrategy(nullptr,load);
 //    audioSeparationStrategy.setLoaderFile(load);
     
     
