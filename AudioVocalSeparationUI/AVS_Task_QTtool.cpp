@@ -38,6 +38,7 @@ bool AVS_Task_QTtool::if_hasVideo(AVS_Task& obj ,QUrl url)
 
         QEventLoop* el = new QEventLoop();
         QEventLoop::connect(pl, &QMediaPlayer::mediaStatusChanged, el, &QEventLoop::quit);
+        pl->play();
 
         el->exec();    //ø™ º ¬º˛—≠ª∑£¨µ»¥˝Ω· ¯
 
@@ -65,7 +66,7 @@ bool AVS_Task_QTtool::if_hasVideo(AVS_Task& obj ,QUrl url)
         obj.setName(rawFileName.toStdString());
         //不要名称
         
-        obj.setUrl(url.path().toStdString());
+        obj.setUrl(url.toLocalFile().toStdString());
 //        qDebug() << "8888" << url;
         //设置状态
         obj.set_stateWaiting();
@@ -73,6 +74,7 @@ bool AVS_Task_QTtool::if_hasVideo(AVS_Task& obj ,QUrl url)
         //判断类型
         
         // 判断媒体类型
+        qDebug() << "载入" << qvsik.videoSize();
         if (qvsik.videoSize().width() > 0 && qvsik.videoSize().height() > 0) {
             obj.media_type =TaskBasis::Video;
         }else{
@@ -121,6 +123,83 @@ bool AVS_Task_QTtool::if_hasVideo(AVS_Task& obj ,QUrl url)
     return is_ok;
 }
 
+bool AVS_Task_QTtool::if_hasVideoV2(AVS_Task& obj ,QUrl url)
+{
+    //改用ffmpeg 判断是否有时间 有就能导入  再判断尺寸
+    QSize size = QSize(0,0);
+    long duration = 0;
+
+    //排除图片
+    //先判断是不是图片
+    QImage image(url.toLocalFile());
+    if (!image.isNull()) {
+        //是图片
+        return false;
+    }
+
+    FFMPEG_Strategy ffmpeg_obj;
+
+    if (!ffmpeg_obj.loadFile_sync(url.toLocalFile())){
+        //不支持 直接返回
+        return false;
+    }
+
+    size = ffmpeg_obj.getSize();
+    duration = ffmpeg_obj.getDuration();
+
+    //判断是否有时间信息
+    bool is_ok = ((duration > 0));
+
+    if (is_ok){
+
+        //获取名称
+        QFileInfo fileInfo = QFileInfo(url.path());
+        //文件名
+        //auto rawFileName = fileInfo.fileName();
+        auto rawFileName = fileInfo.baseName();//不带后缀
+
+        obj.timeRange_in = 0;
+        obj.timeRange_out = duration;
+        obj.raw_duration = duration;
+
+        obj.setName(rawFileName.toStdString());
+        //不要名称
+
+        obj.setUrl(url.toLocalFile().toStdString());
+//        qDebug() << "8888" << url;
+        //设置状态
+        obj.set_stateWaiting();
+
+        //判断类型
+
+        // 判断媒体类型
+//        qDebug() << "载入" << qvsik.videoSize();
+        if ( size.width() > 0 &&  size.height() > 0) {
+            obj.media_type =TaskBasis::Video;
+        }else{
+            obj.media_type =TaskBasis::Audio;
+        }
+
+
+
+        //添加输出格式逻辑处理
+        QSettings settings = QSettings(ORGANIZATION_Name, APPLICATION_Name);
+
+        std::string suffix = settings.value(QSettings_KEY_AVS_OutType_suffix).toString().toStdString();
+        if (suffix == "default" || suffix ==""){
+            //跟随输入
+            obj.outType = fileInfo.suffix().toStdString();
+        }else{
+            obj.outType = suffix;
+        }
+
+    }
+
+
+    return is_ok;
+}
+
+
 
 // 判断是否可以导入 只接受图片和视频。用ffmpeg
 bool AVS_Task_QTtool::SR_if_hasVideo(SR_Task& obj ,QUrl url)
@@ -131,14 +210,14 @@ bool AVS_Task_QTtool::SR_if_hasVideo(SR_Task& obj ,QUrl url)
     SR_Task::Media_type type = SR_Task::Image;
     
     //先判断是不是图片
-    QImage image(url.path());
+    QImage image(url.toLocalFile());
     if (image.isNull()) {
         // 加载失败，文件不是图片
         qDebug() << "File is not an image";
         
         FFMPEG_Strategy ffmpeg_obj;
         
-        if (!ffmpeg_obj.loadFile_sync(url.path())){
+        if (!ffmpeg_obj.loadFile_sync(url.toLocalFile())){
             //不支持 直接返回
             return false;
         }
@@ -181,7 +260,7 @@ bool AVS_Task_QTtool::SR_if_hasVideo(SR_Task& obj ,QUrl url)
     obj.setName(rawFileName.toStdString());
     //不要名称
 
-    obj.setUrl(url.path().toStdString());
+    obj.setUrl(url.toLocalFile().toStdString());
     //        qDebug() << "8888" << url;
     //设置状态
     obj.set_stateWaiting();

@@ -5,13 +5,11 @@
     <name>AVS_SettingQtWidgetsClass</name>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="362"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="32"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="363"/>
         <source>必须选择模型(2个均要选择),软件才能正常工作
 
 分离背景音模型通常选择instrumental.onnx
@@ -21,31 +19,26 @@
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="53"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="369"/>
         <source>自动下载模型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="71"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="368"/>
         <source>安装教程：下载模型 -&gt; 刷新 -&gt; 加载模型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="82"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="376"/>
         <source>手动下载模型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="101"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="370"/>
         <source>跳转网页下载</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="121"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="371"/>
         <source>使用教程:
 1,到网页下载模型.
 2,复制模型文件到模型储存位置
@@ -55,109 +48,91 @@
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="182"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="377"/>
         <source>模型存储位置：</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="209"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="379"/>
         <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="216"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="380"/>
         <source>选择</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="223"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="381"/>
         <source>显示存储位置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="248"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="382"/>
         <source>模型设置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="278"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="383"/>
         <source>分离背景音模型:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="292"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="384"/>
         <source>分离人声音模型:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="306"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="385"/>
         <source>加载模型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="313"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="386"/>
         <source>刷新</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="340"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="387"/>
         <source>验证是否可用</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="366"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="388"/>
         <source>默认分离类型:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="373"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="389"/>
         <source>背景</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="383"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="390"/>
         <source>人声</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="410"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="391"/>
         <source>默认输出文件格式:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="417"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="392"/>
         <source>跟随输入</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="430"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="393"/>
         <source>mp3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="446"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="394"/>
         <source>wav</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/avs_settingqtwidgetsclass.ui" line="465"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_avs_settingqtwidgetsclass.h" line="395"/>
         <source>mp4</source>
         <translation type="unfinished"></translation>
     </message>
@@ -297,21 +272,17 @@
     <name>DownloadCustomItemClass</name>
     <message>
         <location filename="../SettingSpanel/Download/DownloadCustomItem.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_DownloadCustomItem.h" line="111"/>
         <source>DownloadCustomItem</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/Download/DownloadCustomItem.ui" line="75"/>
         <location filename="../SettingSpanel/Download/DownloadCustomItem.ui" line="87"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_DownloadCustomItem.h" line="113"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_DownloadCustomItem.h" line="114"/>
         <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/Download/DownloadCustomItem.ui" line="116"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_DownloadCustomItem.h" line="115"/>
         <source>PushButton</source>
         <translation type="unfinished"></translation>
     </message>
@@ -333,19 +304,16 @@
     <name>FFMPEGTest</name>
     <message>
         <location filename="../ffmpegtest/ffmpegtest.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_ffmpegtest.h" line="45"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ffmpegtest/ffmpegtest.ui" line="26"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_ffmpegtest.h" line="46"/>
         <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ffmpegtest/ffmpegtest.ui" line="39"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_ffmpegtest.h" line="47"/>
         <source>PushButton</source>
         <translation type="unfinished"></translation>
     </message>
@@ -354,13 +322,11 @@
     <name>General_settings_Widgets</name>
     <message>
         <location filename="../SettingSpanel/general_settings_widgets.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_general_settings_widgets.h" line="64"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/general_settings_widgets.ui" line="48"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_general_settings_widgets.h" line="65"/>
         <source>恢复默认设置</source>
         <translation type="unfinished"></translation>
     </message>
@@ -374,46 +340,38 @@
     <name>LoginWindow</name>
     <message>
         <location filename="../user/loginwindow.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_loginwindow.h" line="145"/>
         <source>Dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/loginwindow.ui" line="23"/>
         <location filename="../user/loginwindow.ui" line="75"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_loginwindow.h" line="146"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_loginwindow.h" line="150"/>
         <location filename="../user/loginwindow.cpp" line="11"/>
         <source>登录</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/loginwindow.ui" line="38"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_loginwindow.h" line="147"/>
         <source>邮箱</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/loginwindow.ui" line="52"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_loginwindow.h" line="148"/>
         <source>密码</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/loginwindow.ui" line="84"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_loginwindow.h" line="151"/>
         <source>记住邮箱</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/loginwindow.ui" line="91"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_loginwindow.h" line="152"/>
         <source>忘记密码</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/loginwindow.ui" line="116"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_loginwindow.h" line="153"/>
         <source>没有账号!免费注册</source>
         <translation type="unfinished"></translation>
     </message>
@@ -464,93 +422,77 @@
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="292"/>
         <source>MainWindow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="58"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="295"/>
         <source>主页</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="73"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="296"/>
         <source>音频分离</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="80"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="297"/>
         <source>超分辨率</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="298"/>
         <source>...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="112"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="299"/>
         <source>更多软件</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="124"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="300"/>
         <source>设置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="136"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="301"/>
         <source>用户</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="225"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="303"/>
         <source>UVAIGC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="244"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="304"/>
         <source>雨伞智创</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="308"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="305"/>
         <source>AI赋能,创作无限...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="413"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="294"/>
         <source>关于软件</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="351"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="306"/>
         <source>版本:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="363"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="307"/>
         <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="399"/>
         <location filename="../mainwindow.ui" line="408"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="293"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_mainwindow.h" line="308"/>
         <source>联系我们</source>
         <translation type="unfinished"></translation>
     </message>
@@ -647,112 +589,93 @@
     <name>RegisterWndow</name>
     <message>
         <location filename="../user/registerwndow.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="211"/>
         <source>Dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="20"/>
         <location filename="../user/registerwndow.ui" line="179"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="212"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="229"/>
         <location filename="../user/registerwndow.cpp" line="45"/>
         <source>注册</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="32"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="213"/>
         <source>昵称:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="39"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="214"/>
         <source>大于3个字符</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="50"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="215"/>
         <source>邮箱:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="57"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="216"/>
         <source>邮箱</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="68"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="217"/>
         <source>密码:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="75"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="218"/>
         <source>大于6个字符</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="86"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="219"/>
         <source>确定密码:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="93"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="220"/>
         <source>密码确认</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="104"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="221"/>
         <source>验证码:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="111"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="222"/>
         <source>邮箱收到验证码</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="118"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="223"/>
         <source>发送验证码</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="129"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="224"/>
         <source>邀请码</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="139"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="226"/>
         <source>没有不用填</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="150"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="227"/>
         <source>我已读并同意</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="157"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="228"/>
         <source>本条款和条件</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/registerwndow.ui" line="202"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_registerwndow.h" line="230"/>
         <source>已经有账号?马上登录</source>
         <translation type="unfinished"></translation>
     </message>
@@ -822,23 +745,23 @@
 <context>
     <name>SR_ESRGAN_ncnn_Strategy</name>
     <message>
-        <location filename="../SR/sr_esrgan_ncnn_strategy.cpp" line="224"/>
-        <location filename="../SR/sr_esrgan_ncnn_strategy.cpp" line="231"/>
+        <location filename="../SR/sr_esrgan_ncnn_strategy.cpp" line="233"/>
+        <location filename="../SR/sr_esrgan_ncnn_strategy.cpp" line="240"/>
         <source>不支持图片格式</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SR/sr_esrgan_ncnn_strategy.cpp" line="269"/>
+        <location filename="../SR/sr_esrgan_ncnn_strategy.cpp" line="278"/>
         <source>错误!视频文件加载失败</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SR/sr_esrgan_ncnn_strategy.cpp" line="383"/>
+        <location filename="../SR/sr_esrgan_ncnn_strategy.cpp" line="392"/>
         <source>错误!视频文件合成失败</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../SR/sr_esrgan_ncnn_strategy.cpp" line="404"/>
+        <location filename="../SR/sr_esrgan_ncnn_strategy.cpp" line="413"/>
         <source>错误!最后处理失败</source>
         <translation type="unfinished"></translation>
     </message>
@@ -880,67 +803,56 @@
     <name>SR_TaskListUI_main</name>
     <message>
         <location filename="../SRUI/sr_tasklistui_main.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_tasklistui_main.h" line="260"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_tasklistui_main.ui" line="169"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_tasklistui_main.h" line="265"/>
         <source>将图片或视频文件拖放到这里</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_tasklistui_main.ui" line="210"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_tasklistui_main.h" line="266"/>
         <source>一款通过AI人工智能 对图像进行放大增强,并保持清晰的软件</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_tasklistui_main.ui" line="245"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_tasklistui_main.h" line="268"/>
         <source>输出路径:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_tasklistui_main.ui" line="252"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_tasklistui_main.h" line="269"/>
         <source>PushButton</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_tasklistui_main.ui" line="265"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_tasklistui_main.h" line="270"/>
         <source>选择</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_tasklistui_main.ui" line="295"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_tasklistui_main.h" line="271"/>
         <source>停止</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_tasklistui_main.ui" line="343"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_tasklistui_main.h" line="272"/>
         <source>开始</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_tasklistui_main.ui" line="22"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_tasklistui_main.h" line="261"/>
         <source>+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_tasklistui_main.ui" line="29"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_tasklistui_main.h" line="262"/>
         <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_tasklistui_main.ui" line="225"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_tasklistui_main.h" line="267"/>
         <source>使用流程:设置窗口配置模型文件--&gt;添加文件--&gt;“开始”分离</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1125,98 +1037,82 @@
     <name>SR_editQtWidgets</name>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="311"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="38"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="312"/>
         <source>inTime</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="61"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="313"/>
         <source>outTime</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="158"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="319"/>
         <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="185"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="320"/>
         <source>推理模型:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="195"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="321"/>
         <source>模型放大倍数:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="202"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="322"/>
         <location filename="../SRUI/sr_editqtwidgets.cpp" line="764"/>
         <source>未知</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="229"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="323"/>
         <source>输出格式:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="254"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="324"/>
         <source>跟随输入</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="267"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="325"/>
         <source>mp4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="277"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="326"/>
         <source>mov</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="305"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="327"/>
         <source>PNG</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="318"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="328"/>
         <source>JPG</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="338"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="329"/>
         <source>+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="348"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="330"/>
         <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SRUI/sr_editqtwidgets.ui" line="360"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SR_editQtWidgets.h" line="331"/>
         <source>保存返回列表</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1230,74 +1126,51 @@
     <name>SR_settingqtwidgetsclass</name>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="368"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="36"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="416"/>
         <source>超分辨率引擎1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="72"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="380"/>
         <source>自动下载模型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="90"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="379"/>
         <source>安装教程：下载模型 -&gt; 刷新 -&gt; 加载模型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="101"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="387"/>
         <source>手动下载模型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="120"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="381"/>
         <source>跳转网页下载</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="369"/>
-        <source>没有模型文件可以通过下面自动下载来获取模型文件
-
-推理模型简介:
-realesr-animevideov3-x2 — 适用于动漫的图片和视频
-realesr-animevideov3-x3 — 适用于动漫的图片和视频
-realesr-animevideov3-x4 — 适用于动漫的图片和视频
-realesrgan-x4plus-anime — 适用于动漫的图片���视频
-realesrgan-x4plus — 适用于正常照片和视频
-感谢开源项目: https://github.com/xinntao/Real-ESRGAN 对本引擎提供的帮助和参考</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="201"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="388"/>
         <source>模型存储位置：</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="224"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="389"/>
         <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="244"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="390"/>
         <source>选择</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="251"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="391"/>
         <source>显示存储位置</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1316,7 +1189,6 @@ realesrgan-x4plus — 适用于正常照片和视频
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="140"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="382"/>
         <source>使用教程:
 1,到网页下载模型.
 2,复制模型文件到模型储存位置(文件名称必须为models)
@@ -1326,7 +1198,6 @@ realesrgan-x4plus — 适用于正常照片和视频
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="258"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="393"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -1339,80 +1210,67 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="296"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="403"/>
         <source>模型设置:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="321"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="404"/>
         <source>默认推理模型:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="386"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="407"/>
         <source>模型放大倍数:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="393"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="408"/>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.cpp" line="541"/>
         <source>未知</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="417"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="409"/>
         <source>视频默认输出文件格式:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="427"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="410"/>
         <source>跟随输入</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="440"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="411"/>
         <source>mp4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="450"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="412"/>
         <source>mov</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="467"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="413"/>
         <source>图片默认输出类型:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="474"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="414"/>
         <source>PNG</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="487"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="415"/>
         <source>JPG</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="333"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="405"/>
         <source>刷新</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/sr_settingqtwidgetsclass.ui" line="360"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_sr_settingqtwidgetsclass.h" line="406"/>
         <source>验证是否可用</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1442,25 +1300,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <name>SettingSpanelQtWidgetsClassClass</name>
     <message>
         <location filename="../SettingSpanel/SettingSpanelQtWidgetsClass.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SettingSpanelQtWidgetsClass.h" line="105"/>
         <source>设置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/SettingSpanelQtWidgetsClass.ui" line="39"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SettingSpanelQtWidgetsClass.h" line="106"/>
         <source>通用设置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/SettingSpanelQtWidgetsClass.ui" line="53"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SettingSpanelQtWidgetsClass.h" line="107"/>
         <source>音乐分离设置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../SettingSpanel/SettingSpanelQtWidgetsClass.ui" line="78"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_SettingSpanelQtWidgetsClass.h" line="108"/>
         <source>超分辨率设置</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1469,49 +1323,41 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <name>TaskCustomItem</name>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskCustomItem.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskCustomItem.h" line="146"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskCustomItem.ui" line="72"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskCustomItem.h" line="147"/>
         <source>截图</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskCustomItem.ui" line="93"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskCustomItem.h" line="148"/>
         <source>name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskCustomItem.ui" line="100"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskCustomItem.h" line="149"/>
         <source>长度</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskCustomItem.ui" line="114"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskCustomItem.h" line="150"/>
         <source>info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskCustomItem.ui" line="150"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskCustomItem.h" line="151"/>
         <source>状态</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskCustomItem.ui" line="160"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskCustomItem.h" line="152"/>
         <source>重新链接</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskCustomItem.ui" line="167"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskCustomItem.h" line="153"/>
         <source>编辑</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1530,67 +1376,56 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <name>TaskListWidgetsClass</name>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskListWidgetsClass.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskListWidgetsClass.h" line="260"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskListWidgetsClass.ui" line="22"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskListWidgetsClass.h" line="261"/>
         <source>+</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskListWidgetsClass.ui" line="29"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskListWidgetsClass.h" line="262"/>
         <source>-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskListWidgetsClass.ui" line="169"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskListWidgetsClass.h" line="265"/>
         <source>将音频或视频文件拖放到这里</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskListWidgetsClass.ui" line="210"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskListWidgetsClass.h" line="266"/>
         <source>一款通过AI人工智能 准确分离人声和背景音乐的软件</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskListWidgetsClass.ui" line="225"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskListWidgetsClass.h" line="267"/>
         <source>使用流程:设置窗口配置模型文件--&gt;添加文件--&gt;“开始”分离</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskListWidgetsClass.ui" line="245"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskListWidgetsClass.h" line="268"/>
         <source>输出路径:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskListWidgetsClass.ui" line="252"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskListWidgetsClass.h" line="269"/>
         <source>PushButton</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskListWidgetsClass.ui" line="265"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskListWidgetsClass.h" line="270"/>
         <source>选择</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskListWidgetsClass.ui" line="295"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskListWidgetsClass.h" line="271"/>
         <source>停止</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/TaskListWidgetsClass.ui" line="343"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_TaskListWidgetsClass.h" line="272"/>
         <source>开始</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1758,13 +1593,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <name>UserInfoWindow</name>
     <message>
         <location filename="../user/userinfowindow.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_userinfowindow.h" line="136"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/userinfowindow.ui" line="26"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_userinfowindow.h" line="137"/>
         <source>名称:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1772,27 +1605,21 @@ li.checked::marker { content: &quot;\2612&quot;; }
         <location filename="../user/userinfowindow.ui" line="33"/>
         <location filename="../user/userinfowindow.ui" line="51"/>
         <location filename="../user/userinfowindow.ui" line="69"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_userinfowindow.h" line="138"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_userinfowindow.h" line="140"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_userinfowindow.h" line="142"/>
         <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/userinfowindow.ui" line="44"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_userinfowindow.h" line="139"/>
         <source>邮箱:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/userinfowindow.ui" line="62"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_userinfowindow.h" line="141"/>
         <source>金币:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/userinfowindow.ui" line="97"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_userinfowindow.h" line="143"/>
         <source>退出登录</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1801,32 +1628,27 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <name>UserMainWindow</name>
     <message>
         <location filename="../user/UserMainWindow.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_UserMainWindow.h" line="118"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/UserMainWindow.ui" line="24"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_UserMainWindow.h" line="119"/>
         <source>用户信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/UserMainWindow.ui" line="46"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_UserMainWindow.h" line="120"/>
         <source>我的专业版权限</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/UserMainWindow.ui" line="96"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_UserMainWindow.h" line="122"/>
         <location filename="../user/UserMainWindow.cpp" line="233"/>
         <source>登录</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/UserMainWindow.ui" line="103"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_UserMainWindow.h" line="123"/>
         <source>免费注册</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1867,62 +1689,52 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <name>UserMemberWindow</name>
     <message>
         <location filename="../user/usermemberwindow.ui" line="14"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_usermemberwindow.h" line="175"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/usermemberwindow.ui" line="39"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_usermemberwindow.h" line="176"/>
         <source>状态:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/usermemberwindow.ui" line="46"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_usermemberwindow.h" line="177"/>
         <location filename="../user/usermemberwindow.cpp" line="166"/>
         <source>免费版</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/usermemberwindow.ui" line="53"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_usermemberwindow.h" line="178"/>
         <source>刷新</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/usermemberwindow.ui" line="92"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_usermemberwindow.h" line="179"/>
         <source>到期时间:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/usermemberwindow.ui" line="99"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_usermemberwindow.h" line="180"/>
         <source>0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/usermemberwindow.ui" line="124"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_usermemberwindow.h" line="181"/>
         <source>专业版拥有全部功能!免费版本会有功能限制</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/usermemberwindow.ui" line="131"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_usermemberwindow.h" line="182"/>
         <source>开通专业版</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/usermemberwindow.ui" line="170"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_usermemberwindow.h" line="183"/>
         <source>重新载入</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../user/usermemberwindow.ui" line="177"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_usermemberwindow.h" line="184"/>
         <source>设备管理</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1964,73 +1776,61 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <name>VideoQtWidgetsClass</name>
     <message>
         <location filename="../AudioVocalSeparationUI/VideoQtWidgets.ui" line="32"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_VideoQtWidgets.h" line="294"/>
         <source>inTime</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/VideoQtWidgets.ui" line="55"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_VideoQtWidgets.h" line="295"/>
         <source>outTime</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/VideoQtWidgets.ui" line="139"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_VideoQtWidgets.h" line="301"/>
         <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/VideoQtWidgets.ui" line="166"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_VideoQtWidgets.h" line="302"/>
         <source>分离类型:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/VideoQtWidgets.ui" line="173"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_VideoQtWidgets.h" line="303"/>
         <source>背景</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/VideoQtWidgets.ui" line="183"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_VideoQtWidgets.h" line="304"/>
         <source>人声</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/VideoQtWidgets.ui" line="197"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_VideoQtWidgets.h" line="305"/>
         <source>输出格式:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/VideoQtWidgets.ui" line="204"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_VideoQtWidgets.h" line="306"/>
         <source>跟随输入</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/VideoQtWidgets.ui" line="217"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_VideoQtWidgets.h" line="307"/>
         <source>mp3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/VideoQtWidgets.ui" line="233"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_VideoQtWidgets.h" line="308"/>
         <source>wav</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/VideoQtWidgets.ui" line="252"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_VideoQtWidgets.h" line="309"/>
         <source>mp4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../AudioVocalSeparationUI/VideoQtWidgets.ui" line="279"/>
-        <location filename="../Mac/UVAIGC_autogen/include_Debug/ui_VideoQtWidgets.h" line="310"/>
         <source>保存返回列表</source>
         <translation type="unfinished"></translation>
     </message>

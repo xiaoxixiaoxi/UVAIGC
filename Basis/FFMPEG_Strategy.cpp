@@ -27,7 +27,16 @@ FFMPEG_Strategy::FFMPEG_Strategy(QObject *parent)
     bin_url = "";
     QString appPath = QCoreApplication::applicationDirPath();
     //TODO: 根据不同平台加载bin路径
+#ifdef Q_OS_WIN
+    bin_url = appPath + "/ffmpeg";
+#endif
+
+#ifdef Q_OS_MAC
     bin_url = appPath + "/../Resources/ffmpeg";
+
+
+#endif
+
     
     
     //TODO: 判断文件是否存在

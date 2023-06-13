@@ -51,13 +51,22 @@ SR_ESRGAN_ncnn_Strategy::SR_ESRGAN_ncnn_Strategy(QObject *parent)
     bin_url = "";
     QString appPath = QCoreApplication::applicationDirPath();
     //TODO: 根据不同平台加载bin路径
-    bin_url = appPath + "/../Resources/realesrgan-ncnn-vulkan";
+
 //    bin_url = "/Users/linximing/Documents/du/xiaoxi/qt/UVAIGC/Lib/MACLib/realesrgan/未签名/realesrgan-ncnn-vulkan";
     
     
     //TODO: 判断文件是否存在
     
 //    test();
+#ifdef Q_OS_WIN
+     bin_url = appPath + "/realesrgan-ncnn-vulkan";
+#endif
+
+#ifdef Q_OS_MAC
+    bin_url = appPath + "/../Resources/realesrgan-ncnn-vulkan";
+
+
+#endif
     
     
     

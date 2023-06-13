@@ -733,7 +733,7 @@ bool AVS_MDXNet_ONNX_Strategy::savefileFmpeg(AVS_Task& avsTask,std::vector<std::
         
         
         
-        
+        //qDebug()<< "kkkk" << cmd << QString::fromStdString(avsTask.outType) ;
         //区分开 视频 和 音频(看要拷贝属性吗)
         
         

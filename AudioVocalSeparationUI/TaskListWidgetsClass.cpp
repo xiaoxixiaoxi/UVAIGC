@@ -493,7 +493,7 @@ void TaskListWidgetsClass::if_load(QStringList inputlist, QStringList* ok_url, Q
 
 // TODO: 判断是否能导入
         AVS_Task task_obj;
-        if (task_QTtool.if_hasVideo(task_obj,url)) {
+        if (task_QTtool.if_hasVideoV2(task_obj,url)) {
             
 //            QUrl url = QUrl::fromLocalFile(ok_path[i]);
 //            AVS_Task a;

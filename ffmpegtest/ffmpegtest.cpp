@@ -218,8 +218,8 @@ void FFMPEGTest::on_pushButton_clicked()
 {
     
     
-    SR_ESRGAN_ncnn_Strategy sr_obj;
-    return;
+    //SR_ESRGAN_ncnn_Strategy sr_obj;
+    //return;
     
     
 //    readIndex = 0;
@@ -237,7 +237,7 @@ void FFMPEGTest::on_pushButton_clicked()
 //    测试新的
     
     QString appPath = QCoreApplication::applicationDirPath();
-    QString macosPath = appPath + "/../Resources/realesrgan-ncnn-vulkan";
+    QString macosPath = appPath + "/realesrgan-ncnn-vulkan";
     
     
 
@@ -251,29 +251,31 @@ void FFMPEGTest::on_pushButton_clicked()
     
     
     // 读取输入图像
-       QString inputImagePath = "/Users/linximing/Desktop/AppIcon.png";
-       QString outputImagePath = "/Users/linximing/Downloads/realesrgan-ncnn-vulkan-20220424-macos/output2.png";
-       QImage inputImage(inputImagePath);
-       if (inputImage.isNull()) {
-           qWarning("Failed to load input image.");
-           return ;
-       }
+       QString inputImagePath = "C:/Users/linximing/source/repos/build-UVAIGC-Desktop_Qt_6_2_4_MSVC2019_64bit-Release/input.jpg";
+       QString outputImagePath = "C:/Users/linximing/source/repos/build-UVAIGC-Desktop_Qt_6_2_4_MSVC2019_64bit-Release/output2.png";
+//       QImage inputImage(inputImagePath);
+//       if (inputImage.isNull()) {
+//           qWarning("Failed to load input image.");
+//           return ;
+//       }
 
-       // 将输入图像转换为PNG编码
-       QByteArray pngData;
-       QBuffer buffer(&pngData);
-       buffer.open(QIODevice::WriteOnly);
-       inputImage.save(&buffer, "PNG");
-       buffer.close();
+//       // 将输入图像转换为PNG编码
+//       QByteArray pngData;
+//       QBuffer buffer(&pngData);
+//       buffer.open(QIODevice::WriteOnly);
+//       inputImage.save(&buffer, "PNG");
+//       buffer.close();
 
        // 调用 realesrgan-ncnn-vulkan 进行处理
        QString realesrganPath = macosPath;
        QStringList arguments;
        arguments << "-i" << inputImagePath;
        arguments << "-o" << outputImagePath;
-       arguments << "-m" << "/Users/linximing/Movies/UVAIGC/SRModel/realesrmodels";
-       arguments << "-n" << "realesrgan-x4plus";
+//       arguments << "-m" << "/Users/linximing/Movies/UVAIGC/SRModel/realesrmodels";
+//       arguments << "-n" << "realesrgan-x4plus";
+      qDebug()<< macosPath << arguments;
     ffmpegProcess->start(macosPath, arguments);
+
     
 
 //       QProcess process;

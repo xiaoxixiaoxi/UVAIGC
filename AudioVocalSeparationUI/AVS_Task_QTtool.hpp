@@ -27,6 +27,8 @@ public:
     //获取信息
     //判断是否能导入 音频分离的
     static bool if_hasVideo(AVS_Task& obj,QUrl url);
+    static bool if_hasVideoV2(AVS_Task& obj,QUrl url);
+
 
     //超分辨率的
     static bool SR_if_hasVideo(SR_Task& obj,QUrl url);

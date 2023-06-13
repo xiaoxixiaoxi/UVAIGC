@@ -282,6 +282,36 @@ IF (WIN32)
      target_link_libraries(UVAIGC PRIVATE "${ONNX_Lib_DIR}/lib/onnxruntime.lib")
      target_link_libraries(UVAIGC PRIVATE "${DSF_Lib_DIR}/fftw3/lib/libfftw3-3.lib")
 
+     #        //添加ffmpeg
+     # 将要打包的文件复制到应用程序的Resources文件夹
+     add_custom_command(TARGET UVAIGC POST_BUILD
+         COMMAND ${CMAKE_COMMAND} -E copy
+             "${DSF_Lib_DIR}/ffmpeg/ffmpeg.exe"
+             "$<TARGET_FILE_DIR:UVAIGC>/ffmpeg.exe"
+     )
+
+ add_custom_command(TARGET UVAIGC POST_BUILD
+     COMMAND ${CMAKE_COMMAND} -E copy
+         "${DSF_Lib_DIR}/realesrgan/realesrgan-ncnn-vulkan.exe"
+         "$<TARGET_FILE_DIR:UVAIGC>/realesrgan-ncnn-vulkan.exe"
+ )
+add_custom_command(TARGET UVAIGC POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy
+        "${DSF_Lib_DIR}/realesrgan/vcomp140.dll"
+        "$<TARGET_FILE_DIR:UVAIGC>/vcomp140.dll"
+)
+add_custom_command(TARGET UVAIGC POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy
+        "${DSF_Lib_DIR}/realesrgan/vcomp140d.dll"
+        "$<TARGET_FILE_DIR:UVAIGC>/vcomp140d.dll"
+)
+add_custom_command(TARGET UVAIGC POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy
+        "${DSF_Lib_DIR}/realesrgan/vulkan-1.dll"
+        "$<TARGET_FILE_DIR:UVAIGC>/vulkan-1.dll"
+)
+
+
 
 ELSEIF (APPLE)
         MESSAGE("是苹果系统")
